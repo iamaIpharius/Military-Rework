@@ -1,0 +1,47 @@
+﻿l_english:
+
+TTT_era5_nitrogen_fixation:0 "Nitrogen fixation lvl 2"
+TTT_era5_nitrogen_fixation_desc:0 "desc desc desc"
+TTT_era6_nitrogen_fixation:0 "Nitrogen fixation lvl 3"
+TTT_era6_nitrogen_fixation_desc:0 "desc desc desc"
+
+TTT_era5_mechanized_farming:0 "Mechanized farming lvl 2"
+TTT_era5_mechanized_farming_desc:0 "desc desc desc"
+TTT_era6_mechanized_farming:0 "Mechanized farming lvl 3"
+TTT_era6_mechanized_farming_desc:0 "desc desc desc"
+
+TTT_era4_pumpjacks:0 "Pumpjacks farming lvl 2"
+TTT_era4_pumpjacks_desc:0 "desc desc desc"
+TTT_era5_pumpjacks:0 "Pumpjacks farming lvl 3"
+TTT_era5_pumpjacks_desc:0 "desc desc desc"
+TTT_era6_pumpjacks:0 "Pumpjacks farming lvl 4"
+TTT_era6_pumpjacks_desc:0 "desc desc desc"
+
+TTT_era6_compression_ignition:0 "Compression ignition lvl 2"
+TTT_era6_compression_ignition_desc:0 "desc desc desc"
+
+TTT_era5_electric_arc_process:0 "Electric arc process lvl 2"
+TTT_era5_electric_arc_process_desc:0 "desc desc desc"
+TTT_era6_electric_arc_process:0 "Electric arc process lvl 3"
+TTT_era6_electric_arc_process_desc:0 "desc desc desc"
+
+TTT_era6_arc_welding:0 "Arc welding lvl 2"
+TTT_era6_arc_welding_desc:0 "desc desc desc"
+
+TTT_era5_pneumatic_tools:0 "Pneumatic tools lvl 2"
+TTT_era5_pneumatic_tools_desc:0 "desc desc desc"
+TTT_era6_pneumatic_tools:0 "Pneumatic tools lvl 3"
+TTT_era6_pneumatic_tools_desc:0 "desc desc desc"
+
+TTT_era5_plastics:0 "Plastics lvl 2"
+TTT_era5_plastics_desc:0 "desc desc desc"
+TTT_era6_plastics:0 "Plastics lvl 3"
+TTT_era6_plastics_desc:0 "desc desc desc"
+
+TTT_era5_electric_railway:0 "Electric railway 2"
+TTT_era5_electric_railway_desc:0 "desc desc desc"
+TTT_era6_electric_railway:0 "Electric railway 3"
+TTT_era6_electric_railway_desc:0 "desc desc desc"
+
+TTT_era6_oil_turbine:0 "Oil turbine lvl 2"
+TTT_era6_oil_turbine_desc:0 "desc desc desc"

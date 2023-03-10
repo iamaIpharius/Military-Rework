@@ -1,0 +1,21 @@
+﻿westernization = {
+	is_shown = {
+		can_research = westernization
+	}
+
+	possible = {
+		has_law = law_type:law_professional_army
+		has_law = law_type:law_appointed_bureaucrats 
+		NOT = {
+			has_law = law_type:law_traditionalism 
+		}
+	}
+	
+	when_taken = {
+		add_technology_researched = westernization
+	}
+
+	ai_chance = {
+		base = 1000		
+	}
+}

@@ -1,0 +1,4 @@
+era_6 = {
+	#1936-1945
+	technology_cost = 1750000	# for progress bonuses, use a third: 60000000000000000
+}
