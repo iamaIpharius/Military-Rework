@@ -1,20 +1,55 @@
-﻿pm_irregular_infantry = {
+﻿pm_inf = {
+	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
+	}
+}
+
+pm_cav = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
+	}
+}
+
+pm_arty = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
+	}
+}
+
+pm_non_west = {
 	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
 	is_default = yes
+}
+
+pm_napoleon_line = {
+	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_inf
+	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
 		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
 		}
 		level_scaled = {
 			building_employment_soldiers_add = 970
 			building_employment_officers_add = 30
-			building_training_rate_add = 20
+			building_training_rate_add = 30
 		}
 		throughput_scaled = {
 			unit_offense_add = 10
-			unit_defense_add = 15
-		}
-		unscaled = {
-			unit_morale_loss_add = 15
+			unit_defense_add = 10
 		}
 	}
 	country_modifiers = {
@@ -24,48 +59,61 @@
 	}
 }
 
-pm_line_infantry = {
+pm_late_line = {
 	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
-	is_default = yes
+	is_default = no
 	unlocking_technologies = {
 		line_infantry
 	}
+	unlocking_production_methods = {
+		pm_inf
+	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
 		workforce_scaled = {
-			building_input_small_arms_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 950
-			building_employment_officers_add = 50
-			building_training_rate_add = 20
+			building_employment_soldiers_add = 925
+			building_employment_officers_add = 75
+			building_training_rate_add = 30
 		}
 		throughput_scaled = {
-			unit_offense_add = 20
-			unit_defense_add = 30
-		}
-		unscaled = {
-			unit_morale_loss_add = 10
+			unit_offense_add = 15
+			unit_defense_add = 15
 		}
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_army_power_projection_add = 3
+			country_army_power_projection_add = 2
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
 
-pm_skirmish_infantry = {
+pm_flexible = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
+	is_default = no
 	unlocking_technologies = {
 		general_staff
 	}
+	unlocking_production_methods = {
+		pm_inf
+	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
 		workforce_scaled = {
-			building_input_ammunition_add = 1
-			building_input_small_arms_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
 		}
 		level_scaled = {
 			building_employment_soldiers_add = 900
@@ -73,32 +121,37 @@ pm_skirmish_infantry = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
-			unit_offense_add = 30
-			unit_defense_add = 35
-		}
-		unscaled = {
-			unit_morale_loss_add = 10
+			unit_offense_add = 18
+			unit_defense_add = 20
 		}
 	}
 	country_modifiers = {
 		workforce_scaled = {
-			country_army_power_projection_add = 5
+			country_army_power_projection_add = 3
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
 
-pm_trench_infantry = {
+pm_early_trench = {
 	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+	is_default = no
 	unlocking_technologies = {
-		trench_works
+		enlistment_offices
+	}
+	unlocking_production_methods = {
+		pm_inf
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.6
+			unit_provinces_captured_mult = -0.6
+		}
 		workforce_scaled = {
-			building_input_ammunition_add = 2
-			building_input_small_arms_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
 		}
 		level_scaled = {
 			building_employment_soldiers_add = 850
@@ -106,411 +159,8 @@ pm_trench_infantry = {
 			building_training_rate_add = 40
 		}
 		throughput_scaled = {
-			unit_offense_add = 40
-			unit_defense_add = 60
-		}
-		unscaled = {
-			unit_morale_loss_add = 8
-			unit_provinces_captured_mult = -0.25
-			unit_provinces_lost_mult = -0.25
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 7
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_squad_infantry = {
-	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-	unlocking_technologies = {
-		nco_training
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_ammunition_add = 2
-			building_input_small_arms_add = 1
-			building_input_radios_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 800
-			building_employment_officers_add = 200
-			building_training_rate_add = 40
-		}
-		throughput_scaled = {
-			unit_offense_add = 55
-			unit_defense_add = 65
-		}
-		unscaled = {
-			unit_morale_loss_add = 6
-			unit_provinces_lost_mult = -0.25
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 9
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_mechanized_infantry = {
-	texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
-	unlocking_technologies = {
-		mobile_armor
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_small_arms_add = 1
-			building_input_ammunition_add = 3
-			building_input_tanks_add = 1
-			building_input_oil_add = 1
-			building_input_radios_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 750
-			building_employment_officers_add = 250
-			building_training_rate_add = 30
-		}
-		throughput_scaled = {
-			unit_offense_add = 75
-			unit_defense_add = 75
-		}
-		unscaled = {
-			unit_morale_loss_add = 4
-			unit_provinces_captured_mult = 0.25
-			unit_devastation_mult = 0.15
-			# should add Battle Condition chance
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 11
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_no_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
-}
-
-pm_cannon_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
-	unlocking_technologies = {
-		artillery
-	}
-	unlocking_production_methods = {
-		pm_line_infantry
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_artillery_add = 0.5
-		}
-		throughput_scaled = {
-			unit_offense_add = 10
-			unit_defense_add = 10
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.1
-			unit_kill_rate_add = 0.1
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 1
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_mobile_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
-	unlocking_technologies = {
-		napoleonic_warfare
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_artillery_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 15
-			unit_defense_add = 15
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.15
-			unit_kill_rate_add = 0.1
-			unit_provinces_captured_mult = 0.1
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 3
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_shrapnel_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
-	unlocking_technologies = {
-		breech_loading_artillery
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_artillery_add = 1
-			building_input_ammunition_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 30
-			unit_defense_add = 30
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.2
-			unit_kill_rate_add = 0.3
-			unit_devastation_mult = 0.25
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 5
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_siege_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
-	unlocking_technologies = {
-		wargaming
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_artillery_add = 2
-			building_input_ammunition_add = 2
-		}
-		throughput_scaled = {
-			unit_offense_add = 40
-			unit_defense_add = 30
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.4
-			unit_kill_rate_add = 0.25
-			unit_devastation_mult = 0.5
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 7
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_cavalry_scouts = {
-	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-}
-
-pm_bicycle_messengers = {
-	texture = "gfx/interface/icons/production_method_icons/bicycle_messengers.dds"
-	unlocking_technologies = {
-		vulcanization
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_tools_add = 1
-			building_input_rubber_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 5
-		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.2
-			# should add Battle Condition chance
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 1
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_motorized_recon = {
-	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
-	unlocking_technologies = {
-		combustion_engine
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_automobiles_add = 1
-			building_input_oil_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 10
-			unit_defense_add = 5
-		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.3
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 3
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_aerial_recon = {
-	texture = "gfx/interface/icons/production_method_icons/aerial_recon.dds"
-	unlocking_technologies = {
-		military_aviation
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_aeroplanes_add = 1
-			building_input_oil_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 15
-			unit_defense_add = 10
-		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.5
-			# should add Battle Condition chance
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 5
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_no_specialists = {
-	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
-}
-
-pm_machine_gunners = {
-	texture = "gfx/interface/icons/production_method_icons/machine_gunners.dds"
-	unlocking_technologies = {
-		automatic_machine_guns
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_small_arms_add = 1
-			building_input_ammunition_add = 1
-		}
-		throughput_scaled = {
+			unit_offense_add = 22
 			unit_defense_add = 25
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.1
-			unit_kill_rate_add = 0.1
-			unit_provinces_lost_mult = -0.25
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 3
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_infiltrators = {
-	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
-	unlocking_technologies = {
-		stormtroopers
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_radios_add = 1
-			building_input_explosives_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 15
-		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.25
-			# should add Battle Condition chance
-		}
-	}
-	country_modifiers = {
-		workforce_scaled = {
-			country_army_power_projection_add = 3
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
-	}
-}
-
-pm_flamethrower_company = {
-	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
-	unlocking_technologies = {
-		flamethrowers
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_small_arms_add = 1
-			building_input_oil_add = 1
-		}
-		throughput_scaled = {
-			unit_offense_add = 20
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.15
-			unit_kill_rate_add = 0.2
-			unit_devastation_mult = 0.15
 		}
 	}
 	country_modifiers = {
@@ -519,31 +169,74 @@ pm_flamethrower_company = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_chemical_weapons_specialists = {
-	texture = "gfx/interface/icons/production_method_icons/chemical_weapons_specialists.dds"
+pm_late_trench = {
+	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+	is_default = no
 	unlocking_technologies = {
-		chemical_warfare
+		trench_works
 	}
-	disallowing_laws = {
-		law_peasant_levies
+	unlocking_production_methods = {
+		pm_inf
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.7
+			unit_provinces_captured_mult = -0.7
+		}
 		workforce_scaled = {
-			building_input_artillery_add = 1
-			building_input_oil_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 825
+			building_employment_officers_add = 175
+			building_training_rate_add = 40
 		}
 		throughput_scaled = {
-			unit_offense_add = 50
+			unit_offense_add = 26
+			unit_defense_add = 30
 		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_squads = {
+	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		nco_training
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
 		unscaled = {
-			unit_morale_damage_mult = 0.5
-			unit_kill_rate_add = 0.5
-			unit_devastation_mult = 1
+			unit_provinces_lost_mult = -0.5
 			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+			building_training_rate_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 30
+			unit_defense_add = 35
 		}
 	}
 	country_modifiers = {
@@ -552,329 +245,1104 @@ pm_chemical_weapons_specialists = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_irregular_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+pm_cavalry = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
 	is_default = yes
+	unlocking_production_methods = {
+		pm_cav
+	}
 	building_modifiers = {
-		workforce_scaled = {
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 970
-			building_employment_officers_add = 30
-			building_training_rate_add = 20
-		}
-		throughput_scaled = {
-			unit_offense_add = 10
-			unit_defense_add = 15
-		}
 		unscaled = {
-			unit_morale_loss_add = 20
+			unit_morale_damage_mult = 0.5
 		}
-	}
-}
-
-pm_line_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
-	is_default = yes
-	unlocking_technologies = {
-		line_infantry
-	}
-	building_modifiers = {
 		workforce_scaled = {
-			building_input_small_arms_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+			building_input_grain_add = 1
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 950
+			building_employment_soldiers_add = 450
 			building_employment_officers_add = 50
-			building_training_rate_add = 20
-		}
-		throughput_scaled = {
-			unit_offense_add = 20
-			unit_defense_add = 30
-		}
-		unscaled = {
-			unit_morale_loss_add = 15
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_skirmish_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
-	unlocking_technologies = {
-		general_staff
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_ammunition_add = 1
-			building_input_small_arms_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 900
-			building_employment_officers_add = 100
-			building_training_rate_add = 30
-		}
-		throughput_scaled = {
-			unit_offense_add = 30
-			unit_defense_add = 35
-		}
-		unscaled = {
-			unit_morale_loss_add = 15
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_trench_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
-	unlocking_technologies = {
-		trench_works
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_ammunition_add = 2
-			building_input_small_arms_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 850
-			building_employment_officers_add = 150
-			building_training_rate_add = 40
-		}
-		throughput_scaled = {
-			unit_offense_add = 40
-			unit_defense_add = 60
-		}
-		unscaled = {
-			unit_morale_loss_add = 10
-			unit_provinces_captured_mult = -0.25
-			unit_provinces_lost_mult = -0.25
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_squad_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-	unlocking_technologies = {
-		nco_training
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_ammunition_add = 2
-			building_input_small_arms_add = 1
-			building_input_radios_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 800
-			building_employment_officers_add = 200
-			building_training_rate_add = 40
-		}
-		throughput_scaled = {
-			unit_offense_add = 55
-			unit_defense_add = 60
-		}
-		unscaled = {
-			unit_morale_loss_add = 8
-			unit_provinces_lost_mult = -0.25
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_mechanized_infantry_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
-	unlocking_technologies = {
-		mobile_armor
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_small_arms_add = 1
-			building_input_ammunition_add = 3
-			building_input_tanks_add = 1
-			building_input_oil_add = 1
-			building_input_radios_add = 1
-		}
-		level_scaled = {
-			building_employment_soldiers_add = 750
-			building_employment_officers_add = 250
-			building_training_rate_add = 30
-		}
-		throughput_scaled = {
-			unit_offense_add = 75
-			unit_defense_add = 75
-		}
-		unscaled = {
-			unit_morale_loss_add = 6
-			unit_devastation_mult = 0.15
-			# should add Battle Condition chance
-		}
-	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
-
-pm_no_artillery_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
-}
-
-pm_cannon_artillery_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
-	unlocking_technologies = {
-		artillery
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			building_input_artillery_add = 0.5
+			building_training_rate_add = 35
 		}
 		throughput_scaled = {
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.1
-			unit_kill_rate_add = 0.1
-		}
 	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
 	}
 }
 
-pm_mobile_artillery_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
-	unlocking_technologies = {
-		napoleonic_warfare
-	}
-	disallowing_laws = {
-		law_peasant_levies
+pm_hussards = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_cav
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 0.75
+		}
 		workforce_scaled = {
-			building_input_artillery_add = 1
+			building_input_groceries_add = 1
+			building_input_luxury_clothes_add = 1
+			building_input_grain_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 100
+			building_training_rate_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_dragoons = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 0.75
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+			building_input_grain_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 100
+			building_training_rate_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_cuirassiers = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 1
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_luxury_clothes_add = 1
+			building_input_grain_add = 1
+			building_input_iron_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 300
+			building_employment_officers_add = 200
+			building_training_rate_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_light = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+			unit_devastation_mult = 0.05
+			unit_kill_rate_add = 0.15
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 100
+			building_training_rate_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+}
+
+pm_medium = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.6
+			unit_devastation_mult = 0.1
+			unit_kill_rate_add = 0.25
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 100
+			building_training_rate_add = 50
 		}
 		throughput_scaled = {
 			unit_offense_add = 15
 			unit_defense_add = 15
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.15
-			unit_kill_rate_add = 0.1
-			unit_provinces_captured_mult = 0.1
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_shrapnel_artillery_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
-	unlocking_technologies = {
-		breech_loading_artillery
-	}
-	disallowing_laws = {
-		law_peasant_levies
+pm_heavy = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_arty
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.7
+			unit_devastation_mult = 0.15
+			unit_kill_rate_add = 0.35
+		}
 		workforce_scaled = {
-			building_input_artillery_add = 1
-			building_input_ammunition_add = 1
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 100
+			building_training_rate_add = 50
 		}
 		throughput_scaled = {
-			unit_offense_add = 30
-			unit_defense_add = 30
+			unit_offense_add = 15
+			unit_defense_add = 15
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.2
-			unit_kill_rate_add = 0.3
-			unit_devastation_mult = 0.25
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_siege_artillery_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
-	unlocking_technologies = {
-		wargaming
-	}
-	disallowing_laws = {
-		law_peasant_levies
+pm_tribes = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
 		workforce_scaled = {
-			building_input_artillery_add = 2
-			building_input_ammunition_add = 2
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 970
+			building_employment_officers_add = 30
+			building_training_rate_add = 10
 		}
 		throughput_scaled = {
-			unit_offense_add = 40
-			unit_defense_add = 30
-		}
-		unscaled = {
-			unit_morale_damage_mult = 0.4
-			unit_kill_rate_add = 0.25
-			unit_devastation_mult = 0.5
+			unit_offense_add = 7
+			unit_defense_add = 7
 		}
 	}
-	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
 	}
 }
 
-pm_cavalry_scouts_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-}
-
-pm_bicycle_messengers_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/bicycle_messengers.dds"
-	unlocking_technologies = {
-		vulcanization
-	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+pm_irregulars = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
 		workforce_scaled = {
-			building_input_tools_add = 1
-			building_input_rubber_add = 1
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 970
+			building_employment_officers_add = 30
+			building_training_rate_add = 10
 		}
 		throughput_scaled = {
 			unit_offense_add = 5
+			unit_defense_add = 10
 		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+pm_feudal = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
 		unscaled = {
-			unit_provinces_captured_mult = 0.1
-			# should add Battle Condition chance
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 700
+			building_employment_officers_add = 300
+			building_training_rate_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+pm_none_os = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	is_default = yes
+}
+
+pm_none_ds = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	is_default = yes
+}
+
+pm_scirmishers = {
+	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		army_reserves
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+			building_input_ammunition_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_assault_eng = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_workshops.dds"
+	is_default = no
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_explosives_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 80
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 8
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_stormtroopers = {
+	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		stormtroopers
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+			building_input_ammunition_add = 0.5
+			building_input_explosives_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 70
+			building_employment_officers_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_flame = {
+	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
+	is_default = no
+	unlocking_technologies = {
+		flamethrowers
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.05
+			unit_kill_rate_add = 0.05
+			unit_morale_damage_mult = 0.15
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+			building_input_oil_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 70
+			building_employment_officers_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_gas = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_weapons_specialists.dds"
+	is_default = no
+	unlocking_technologies = {
+		chemical_warfare
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.15
+			unit_kill_rate_add = 0.5
+			unit_morale_damage_mult = 0.25
+		}
+		workforce_scaled = {
+			building_input_oil_add = 0.5
+			building_input_lead_add = 0.5
+			building_input_sulfur_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 50
+			building_employment_officers_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_tank = {
+	texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
+	is_default = no
+	unlocking_technologies = {
+		flamethrowers
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.15
+			unit_morale_damage_mult = 0.25
+		}
+		workforce_scaled = {
+			building_input_tanks_add = 1
+			building_input_oil_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 50
+			building_employment_officers_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 20
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_guard = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 0.25
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+			building_input_grain_add = 0.5
+			building_input_steel_add = 0.5
+			building_input_luxury_clothes_add = 0.5
+		}
+		level_scaled = {
+			building_employment_officers_add = 200
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_mortars = {
+	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		shell_gun
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.02
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 80
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_gatling = {
+	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		handcranked_machine_gun
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_kill_rate_add = 0.1
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 60
+			building_employment_officers_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_siege = {
+	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		wargaming
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.15
+			unit_kill_rate_add = 0.15
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 60
+			building_employment_officers_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_elite_warriors = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = no
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_iron_add = 0.5
+			building_input_luxury_clothes_add = 0.5
+		}
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_advisers = {
+	texture = "gfx/interface/icons/production_method_icons/unused/skirmish_infantry_old.dds"
+	is_default = no
+	unlocking_technologies = {
+		general_staff
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_luxury_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_mercs = {
+	texture = "gfx/interface/icons/production_method_icons/unused/officer_training.dds"
+	is_default = no
+	unlocking_technologies = {
+		enlistment_offices
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 50
+			building_employment_officers_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_engineers = {
+	texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+	is_default = no
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_tools_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 60
+			building_employment_officers_add = 40
+		}
+		throughput_scaled = {
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_mg = {
+	texture = "gfx/interface/icons/production_method_icons/machine_gunners.dds"
+	is_default = no
+	unlocking_technologies = {
+		automatic_machine_guns
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 1
+			building_input_ammunition_add = 0.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_armtrain = {
+	texture = "gfx/interface/icons/production_method_icons/unused/armored_trains.dds"
+	is_default = no
+	unlocking_technologies = {
+		electric_railway
+	}
+	unlocking_production_methods = {
+		pm_inf
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_captured_mult = -0.5
+			unit_provinces_lost_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_engines_add = 1
+			building_input_artillery_add = 1
+			building_input_steel_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 20
+			unit_defense_add = 20
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_local_militias = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 5
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_old_arty = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		artillery
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 0.5
+			building_input_ammunition_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 80
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 7
+			unit_defense_add = 7
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_locals = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 1
+			unit_defense_add = 1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_jagers_nonwest = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 2
+			unit_defense_add = 2
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_cav_scouts_nonwest = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+			building_input_grain_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+		throughput_scaled = {
+			unit_offense_add = 3
+			unit_defense_add = 3
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_jagers = {
+	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+	is_default = yes
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 80
+			building_employment_officers_add = 20
+		}
+		throughput_scaled = {
+			unit_offense_add = 2
+			unit_defense_add = 2
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
 		}
 	}
 	timed_modifiers = {
@@ -882,183 +1350,750 @@ pm_bicycle_messengers_conscription = {
 	}
 }
 
-pm_motorized_recon_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+pm_cav_scouts = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = no
 	unlocking_technologies = {
-		combustion_engine
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_inf
+		pm_cav
 	}
 	building_modifiers = {
+		unscaled = {
+		}
 		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+			building_input_grain_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 70
+			building_employment_officers_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 3
+			unit_defense_add = 3
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}
+
+pm_balloon = {
+	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+	is_default = no
+	unlocking_technologies = {
+		electric_telegraph
+	}
+	unlocking_production_methods = {
+		pm_inf
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_kill_rate_add = 0.1
+		}
+		workforce_scaled = {
+			building_input_tools_add = 1
+			building_input_luxury_clothes_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 0
+			building_employment_officers_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 0
+			unit_defense_add = 0
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_armored_cars = {
+	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+	is_default = no
+	unlocking_technologies = {
+		wargaming
+	}
+	unlocking_production_methods = {
+		pm_inf
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 0.1
+		}
+		workforce_scaled = {
+			building_input_steel_add = 1
 			building_input_automobiles_add = 1
-			building_input_oil_add = 1
+			building_input_small_arms_add = 1
+			building_input_oil_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 60
+			building_employment_officers_add = 40
 		}
 		throughput_scaled = {
 			unit_offense_add = 10
 			unit_defense_add = 5
 		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.15
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_aerial_recon_conscription = {
+pm_planes = {
 	texture = "gfx/interface/icons/production_method_icons/aerial_recon.dds"
+	is_default = no
 	unlocking_technologies = {
 		military_aviation
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_inf
+		pm_cav
+		pm_arty
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_morale_damage_mult = 0.15
+		}
 		workforce_scaled = {
 			building_input_aeroplanes_add = 1
 			building_input_oil_add = 1
 		}
+		level_scaled = {
+			building_employment_soldiers_add = 0
+			building_employment_officers_add = 100
+		}
 		throughput_scaled = {
-			unit_offense_add = 15
+			unit_offense_add = 10
 			unit_defense_add = 10
 		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.25
-			# should add Battle Condition chance
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_no_specialists_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
-}
-
-pm_machine_gunners_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/machine_gunners.dds"
+pm_observers = {
+	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+	is_default = no
 	unlocking_technologies = {
-		automatic_machine_guns
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_arty
 	}
 	building_modifiers = {
+		unscaled = {
+			unit_kill_rate_add = 0.05
+		}
+		workforce_scaled = {
+			building_input_tools_add = 0.2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 50
+			building_employment_officers_add = 50
+		}
+		throughput_scaled = {
+			unit_offense_add = 0
+			unit_defense_add = 0
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_old_weapons = {
+	texture = "gfx/interface/icons/production_method_icons/unused/pre_guns.dds"
+	is_default = yes
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_hardwood_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 3
+			unit_defense_add = 3
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_musket = {
+	texture = "gfx/interface/icons/production_method_icons/muskets.dds"
+	is_default = yes
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 4
+			unit_defense_add = 4
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_needle = {
+	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
+	is_default = no
+	unlocking_technologies = {
+		percussion_cap
+	}
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
 		workforce_scaled = {
 			building_input_small_arms_add = 1
 			building_input_ammunition_add = 1
 		}
-		throughput_scaled = {
-			unit_defense_add = 25
+		level_scaled = {
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.1
-			unit_kill_rate_add = 0.1
-			unit_provinces_lost_mult = -0.25
+		throughput_scaled = {
+			unit_offense_add = 6
+			unit_defense_add = 6
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 2
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_infiltrators_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+pm_capsule = {
+	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
+	is_default = no
 	unlocking_technologies = {
-		stormtroopers
+		rifling
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
 	}
 	building_modifiers = {
+		unscaled = {
+		}
 		workforce_scaled = {
-			building_input_radios_add = 1
-			building_input_explosives_add = 1
+			building_input_small_arms_add = 1
+			building_input_ammunition_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 9
+			unit_defense_add = 9
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 2
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_breach_load_rifle = {
+	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
+	is_default = no
+	unlocking_technologies = {
+		repeaters
+	}
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 1
+			building_input_ammunition_add = 1.5
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 12
+			unit_defense_add = 12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_cartridge = {
+	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
+	is_default = no
+	unlocking_technologies = {
+		cartridge
+	}
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 1.5
+			building_input_ammunition_add = 2
+		}
+		level_scaled = {
 		}
 		throughput_scaled = {
 			unit_offense_add = 15
+			unit_defense_add = 15
 		}
-		unscaled = {
-			unit_provinces_captured_mult = 0.25
-			# should add Battle Condition chance
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 4
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_flamethrower_company_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
+pm_bolt_action = {
+	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
+	is_default = no
 	unlocking_technologies = {
-		flamethrowers
+		bolt_action_rifles
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_non_west
+		pm_inf
 	}
 	building_modifiers = {
+		unscaled = {
+		}
 		workforce_scaled = {
-			building_input_small_arms_add = 1
-			building_input_oil_add = 1
+			building_input_small_arms_add = 2
+			building_input_ammunition_add = 2.5
+		}
+		level_scaled = {
 		}
 		throughput_scaled = {
 			unit_offense_add = 20
+			unit_defense_add = 20
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.15
-			unit_kill_rate_add = 0.2
-			unit_devastation_mult = 0.15
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
+		pm_offense_defense_readjustment
 	}
 }
 
-pm_chemical_weapons_specialists_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/chemical_weapons_specialists.dds"
+pm_cold_weapons = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"
+	is_default = yes
 	unlocking_technologies = {
-		chemical_warfare
 	}
-	disallowing_laws = {
-		law_peasant_levies
-		law_mass_conscription
+	unlocking_production_methods = {
+		pm_cav
 	}
 	building_modifiers = {
+		unscaled = {
+		}
 		workforce_scaled = {
-			building_input_artillery_add = 1
-			building_input_oil_add = 1
+			building_input_iron_add = 1
+		}
+		level_scaled = {
 		}
 		throughput_scaled = {
-			unit_offense_add = 50
+			unit_offense_add = 6
+			unit_defense_add = 2
 		}
-		unscaled = {
-			unit_morale_damage_mult = 0.5
-			unit_kill_rate_add = 0.5
-			unit_devastation_mult = 1
-			unit_provinces_captured_mult = -0.5
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment_minor
 	}
 }
 
-####
+pm_pistols = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.2
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 4
+			unit_defense_add = 4
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 2
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_early_carbines = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+	is_default = no
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 6
+			unit_defense_add = 6
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_revolvers = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+	is_default = no
+	unlocking_technologies = {
+		rifling
+	}
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+			building_input_ammunition_add = 0.2
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_carbines = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+	is_default = no
+	unlocking_technologies = {
+		repeaters
+	}
+	unlocking_production_methods = {
+		pm_cav
+	}
+	building_modifiers = {
+		unscaled = {
+		}
+		workforce_scaled = {
+			building_input_small_arms_add = 0.5
+			building_input_ammunition_add = 0.5
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+	}
+}
+
+pm_muzzle_load_gun = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.05
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_rifled_gun = {
+	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+		shell_gun
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.1
+			unit_kill_rate_add = 0.05
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 2
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_breach_load_gun = {
+	texture = "gfx/interface/icons/production_method_icons/unused/breech_loading_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+		breech_loading_artillery
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.15
+			unit_kill_rate_add = 0.1
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 1
+			building_input_ammunition_add = 1
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 18
+			unit_defense_add = 18
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_projectile = {
+	texture = "gfx/interface/icons/production_method_icons/explosive_shells.dds"
+	is_default = yes
+	unlocking_technologies = {
+		wargaming
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.2
+			unit_kill_rate_add = 0.15
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 1.5
+			building_input_ammunition_add = 2
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 22
+			unit_defense_add = 22
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 4
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_recoil_system = {
+	texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+		defense_in_depth
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_devastation_mult = 0.25
+			unit_kill_rate_add = 0.2
+		}
+		workforce_scaled = {
+			building_input_artillery_add = 2
+			building_input_ammunition_add = 2
+		}
+		level_scaled = {
+		}
+		throughput_scaled = {
+			unit_offense_add = 26
+			unit_defense_add = 26
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
 pm_wound_dressing = {
 	texture = "gfx/interface/icons/production_method_icons/wound_dressing.dds"
 	building_modifiers = {
 		unscaled = {
-			unit_recovery_rate_add = 0.25
+			unit_recovery_rate_add = 0.15
 		}
 	}
 }
@@ -1067,15 +2102,15 @@ pm_first_aid = {
 	texture = "gfx/interface/icons/production_method_icons/first_aid.dds"
 	unlocking_technologies = {
 		triage
+		westernization
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			building_input_liquor_add = 2
+			building_input_liquor_add = 1
 			building_input_fabric_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.25
-			unit_recovery_rate_add = 0.5
+			unit_recovery_rate_add = 0.3
 		}
 	}
 }
@@ -1084,21 +2119,1494 @@ pm_field_hospitals = {
 	texture = "gfx/interface/icons/production_method_icons/field_hospitals.dds"
 	unlocking_technologies = {
 		modern_nursing
+		westernization
 	}
 	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
 		workforce_scaled = {
-			building_input_liquor_add = 2
-			building_input_opium_add = 2
+			building_input_liquor_add = 1
+			building_input_opium_add = 1
 			building_input_fabric_add = 1
 			building_input_tools_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.5
-			unit_recovery_rate_add = 0.75
+			unit_recovery_rate_add = 0.5
 		}
 	}
 }
 
+pm_horse_log = {
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
+	unlocking_technologies = {
+	}
+	building_modifiers = {
+		level_scaled = {
+		}
+		workforce_scaled = {
+			building_input_grain_add = 1
+		}
+		unscaled = {
+		}
+	}
+}
+
+pm_trains_log = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+	unlocking_technologies = {
+		westernization
+		steel_railway_cars
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
+		workforce_scaled = {
+			building_input_grain_add = 1
+			building_input_transportation_add = 1
+		}
+		unscaled = {
+			unit_morale_recovery_mult = 0.15
+		}
+	}
+}
+
+pm_moto_log = {
+	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
+	unlocking_technologies = {
+		westernization
+		combustion_engine
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
+		workforce_scaled = {
+			building_input_automobiles_add = 1
+			building_input_transportation_add = 1
+		}
+		unscaled = {
+			unit_morale_recovery_mult = 0.3
+		}
+	}
+}
+
+pm_messanger = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	unlocking_technologies = {
+	}
+	building_modifiers = {
+		level_scaled = {
+		}
+		workforce_scaled = {
+		}
+		unscaled = {
+		}
+	}
+}
+
+pm_telegraph = {
+	texture = "gfx/interface/icons/production_method_icons/standard_fences.dds"
+	unlocking_technologies = {
+		westernization
+		electric_telegraph
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 30
+		}
+		workforce_scaled = {
+			building_input_tools_add = 1
+		}
+		unscaled = {
+			unit_morale_loss_mult = -0.15
+		}
+	}
+}
+
+pm_radio = {
+	texture = "gfx/interface/icons/production_method_icons/radios.dds"
+	unlocking_technologies = {
+		westernization
+		radio
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 60
+		}
+		workforce_scaled = {
+			building_input_radios_add = 1
+		}
+		unscaled = {
+			unit_morale_loss_mult = -0.3
+		}
+	}
+}
+
+pm_telephone = {
+	texture = "gfx/interface/icons/production_method_icons/telephones.dds"
+	unlocking_technologies = {
+		westernization
+		telephone
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 100
+		}
+		workforce_scaled = {
+			building_input_telephones_add = 1
+		}
+		unscaled = {
+			unit_morale_loss_mult = -0.45
+		}
+	}
+}
+
+pm_inf_cons = {
+	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
+	}
+}
+
+pm_non_west_cons = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+}
+
+pm_napoleon_line_cons = {
+	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 970
+			building_employment_officers_add = 30
+			building_training_rate_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+pm_late_line_cons = {
+	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		line_infantry
+	}
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 925
+			building_employment_officers_add = 75
+			building_training_rate_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 15
+			unit_defense_add = 15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 2
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}
+
+pm_flexible_cons = {
+	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		general_staff
+	}
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 900
+			building_employment_officers_add = 100
+			building_training_rate_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 18
+			unit_defense_add = 20
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 3
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment_minor
+	}
+}
+
+pm_early_trench_cons = {
+	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		enlistment_offices
+	}
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.6
+			unit_provinces_captured_mult = -0.6
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 850
+			building_employment_officers_add = 150
+			building_training_rate_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 22
+			unit_defense_add = 25
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 4
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_late_trench_cons = {
+	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		trench_works
+	}
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.7
+			unit_provinces_captured_mult = -0.7
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 825
+			building_employment_officers_add = 175
+			building_training_rate_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 26
+			unit_defense_add = 30
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_squads_cons = {
+	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
+	is_default = no
+	unlocking_technologies = {
+		nco_training
+	}
+	unlocking_production_methods = {
+		pm_inf_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+			building_training_rate_add = 40
+		}
+		throughput_scaled = {
+			unit_offense_add = 30
+			unit_defense_add = 35
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 6
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_tribes_cons = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 970
+			building_employment_officers_add = 30
+			building_training_rate_add = 10
+		}
+		throughput_scaled = {
+			unit_offense_add = 7
+			unit_defense_add = 7
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+pm_irregulars_cons = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 970
+			building_employment_officers_add = 30
+			building_training_rate_add = 10
+		}
+		throughput_scaled = {
+			unit_offense_add = 5
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+pm_feudal_cons = {
+	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+	is_default = yes
+	unlocking_production_methods = {
+		pm_non_west_cons
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.5
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 700
+			building_employment_officers_add = 300
+			building_training_rate_add = 30
+		}
+		throughput_scaled = {
+			unit_offense_add = 10
+			unit_defense_add = 10
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 1
+		}
+	}
+}
+
+# pm_irregular_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+# 	is_default = yes
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 970
+# 			building_employment_officers_add = 30
+# 			building_training_rate_add = 20
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 15
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 1
+# 		}
+# 	}
+# }
+# pm_line_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+# 	is_default = yes
+# 	unlocking_technologies = {
+# 		line_infantry
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 950
+# 			building_employment_officers_add = 50
+# 			building_training_rate_add = 20
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 10
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 3
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_skirmish_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
+# 	unlocking_technologies = {
+# 		general_staff
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 1
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 			building_training_rate_add = 30
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 30
+# 			unit_defense_add = 35
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 10
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 5
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_trench_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+# 	unlocking_technologies = {
+# 		trench_works
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 2
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 850
+# 			building_employment_officers_add = 150
+# 			building_training_rate_add = 40
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 40
+# 			unit_defense_add = 60
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 8
+# 			unit_provinces_captured_mult = -0.25
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 7
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_squad_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
+# 	unlocking_technologies = {
+# 		nco_training
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 2
+# 			building_input_small_arms_add = 1
+# 			building_input_radios_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 800
+# 			building_employment_officers_add = 200
+# 			building_training_rate_add = 40
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 55
+# 			unit_defense_add = 65
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 6
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 9
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_mechanized_infantry = {
+# 	texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
+# 	unlocking_technologies = {
+# 		mobile_armor
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_ammunition_add = 3
+# 			building_input_tanks_add = 1
+# 			building_input_oil_add = 1
+# 			building_input_radios_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 750
+# 			building_employment_officers_add = 250
+# 			building_training_rate_add = 30
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 75
+# 			unit_defense_add = 75
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 4
+# 			unit_provinces_captured_mult = 0.25
+# 			unit_devastation_mult = 0.15
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 11
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_no_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
+# }
+# pm_cannon_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+# 	unlocking_technologies = {
+# 		artillery
+# 	}
+# 	unlocking_production_methods = {
+# 		pm_line_infantry
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 0.5
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 10
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.1
+# 			unit_kill_rate_add = 0.1
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 1
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_mobile_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+# 	unlocking_technologies = {
+# 		napoleonic_warfare
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 			unit_defense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.15
+# 			unit_kill_rate_add = 0.1
+# 			unit_provinces_captured_mult = 0.1
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 3
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_shrapnel_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
+# 	unlocking_technologies = {
+# 		breech_loading_artillery
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 			building_input_ammunition_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 30
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.2
+# 			unit_kill_rate_add = 0.3
+# 			unit_devastation_mult = 0.25
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 5
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_siege_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
+# 	unlocking_technologies = {
+# 		wargaming
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 2
+# 			building_input_ammunition_add = 2
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 40
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.4
+# 			unit_kill_rate_add = 0.25
+# 			unit_devastation_mult = 0.5
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 7
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_cavalry_scouts = {
+# 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+# }
+# pm_bicycle_messengers = {
+# 	texture = "gfx/interface/icons/production_method_icons/bicycle_messengers.dds"
+# 	unlocking_technologies = {
+# 		vulcanization
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_tools_add = 1
+# 			building_input_rubber_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 5
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.2
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 1
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_motorized_recon = {
+# 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+# 	unlocking_technologies = {
+# 		combustion_engine
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_automobiles_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 5
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.3
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 3
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_aerial_recon = {
+# 	texture = "gfx/interface/icons/production_method_icons/aerial_recon.dds"
+# 	unlocking_technologies = {
+# 		military_aviation
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_aeroplanes_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 			unit_defense_add = 10
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.5
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 5
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_no_specialists = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+# }
+# pm_machine_gunners = {
+# 	texture = "gfx/interface/icons/production_method_icons/machine_gunners.dds"
+# 	unlocking_technologies = {
+# 		automatic_machine_guns
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_ammunition_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_defense_add = 25
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.1
+# 			unit_kill_rate_add = 0.1
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 3
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_infiltrators = {
+# 	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+# 	unlocking_technologies = {
+# 		stormtroopers
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_radios_add = 1
+# 			building_input_explosives_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.25
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 3
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_flamethrower_company = {
+# 	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
+# 	unlocking_technologies = {
+# 		flamethrowers
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.15
+# 			unit_kill_rate_add = 0.2
+# 			unit_devastation_mult = 0.15
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 4
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_chemical_weapons_specialists = {
+# 	texture = "gfx/interface/icons/production_method_icons/chemical_weapons_specialists.dds"
+# 	unlocking_technologies = {
+# 		chemical_warfare
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 50
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.5
+# 			unit_kill_rate_add = 0.5
+# 			unit_devastation_mult = 1
+# 			unit_provinces_captured_mult = -0.5
+# 		}
+# 	}
+# 	country_modifiers = {
+# 		workforce_scaled = {
+# 			country_army_power_projection_add = 6
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_irregular_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+# 	is_default = yes
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 970
+# 			building_employment_officers_add = 30
+# 			building_training_rate_add = 20
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 20
+# 		}
+# 	}
+# }
+# pm_line_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+# 	is_default = yes
+# 	unlocking_technologies = {
+# 		line_infantry
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 950
+# 			building_employment_officers_add = 50
+# 			building_training_rate_add = 20
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 15
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_skirmish_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
+# 	unlocking_technologies = {
+# 		general_staff
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 1
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 900
+# 			building_employment_officers_add = 100
+# 			building_training_rate_add = 30
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 30
+# 			unit_defense_add = 35
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 15
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_trench_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
+# 	unlocking_technologies = {
+# 		trench_works
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 2
+# 			building_input_small_arms_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 850
+# 			building_employment_officers_add = 150
+# 			building_training_rate_add = 40
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 40
+# 			unit_defense_add = 60
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 10
+# 			unit_provinces_captured_mult = -0.25
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_squad_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
+# 	unlocking_technologies = {
+# 		nco_training
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_ammunition_add = 2
+# 			building_input_small_arms_add = 1
+# 			building_input_radios_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 800
+# 			building_employment_officers_add = 200
+# 			building_training_rate_add = 40
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 55
+# 			unit_defense_add = 60
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 8
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_mechanized_infantry_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
+# 	unlocking_technologies = {
+# 		mobile_armor
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_ammunition_add = 3
+# 			building_input_tanks_add = 1
+# 			building_input_oil_add = 1
+# 			building_input_radios_add = 1
+# 		}
+# 		level_scaled = {
+# 			building_employment_soldiers_add = 750
+# 			building_employment_officers_add = 250
+# 			building_training_rate_add = 30
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 75
+# 			unit_defense_add = 75
+# 		}
+# 		unscaled = {
+# 			unit_morale_loss_add = 6
+# 			unit_devastation_mult = 0.15
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
+# pm_no_artillery_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
+# }
+# pm_cannon_artillery_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+# 	unlocking_technologies = {
+# 		artillery
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 0.5
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 10
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.1
+# 			unit_kill_rate_add = 0.1
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_mobile_artillery_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+# 	unlocking_technologies = {
+# 		napoleonic_warfare
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 			unit_defense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.15
+# 			unit_kill_rate_add = 0.1
+# 			unit_provinces_captured_mult = 0.1
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_shrapnel_artillery_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/shrapnel_artillery.dds"
+# 	unlocking_technologies = {
+# 		breech_loading_artillery
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 			building_input_ammunition_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 30
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.2
+# 			unit_kill_rate_add = 0.3
+# 			unit_devastation_mult = 0.25
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_siege_artillery_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
+# 	unlocking_technologies = {
+# 		wargaming
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 2
+# 			building_input_ammunition_add = 2
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 40
+# 			unit_defense_add = 30
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.4
+# 			unit_kill_rate_add = 0.25
+# 			unit_devastation_mult = 0.5
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_cavalry_scouts_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+# }
+# pm_bicycle_messengers_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/bicycle_messengers.dds"
+# 	unlocking_technologies = {
+# 		vulcanization
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_tools_add = 1
+# 			building_input_rubber_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 5
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.1
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_motorized_recon_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+# 	unlocking_technologies = {
+# 		combustion_engine
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_automobiles_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 10
+# 			unit_defense_add = 5
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.15
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_aerial_recon_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/aerial_recon.dds"
+# 	unlocking_technologies = {
+# 		military_aviation
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_aeroplanes_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 			unit_defense_add = 10
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.25
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_no_specialists_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+# }
+# pm_machine_gunners_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/machine_gunners.dds"
+# 	unlocking_technologies = {
+# 		automatic_machine_guns
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_ammunition_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_defense_add = 25
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.1
+# 			unit_kill_rate_add = 0.1
+# 			unit_provinces_lost_mult = -0.25
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_infiltrators_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/infiltrators.dds"
+# 	unlocking_technologies = {
+# 		stormtroopers
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_radios_add = 1
+# 			building_input_explosives_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 15
+# 		}
+# 		unscaled = {
+# 			unit_provinces_captured_mult = 0.25
+# 			# should add Battle Condition chance
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_flamethrower_company_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/flamethrower_company.dds"
+# 	unlocking_technologies = {
+# 		flamethrowers
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_small_arms_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 20
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.15
+# 			unit_kill_rate_add = 0.2
+# 			unit_devastation_mult = 0.15
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+# pm_chemical_weapons_specialists_conscription = {
+# 	texture = "gfx/interface/icons/production_method_icons/chemical_weapons_specialists.dds"
+# 	unlocking_technologies = {
+# 		chemical_warfare
+# 	}
+# 	disallowing_laws = {
+# 		law_peasant_levies
+# 		law_mass_conscription
+# 	}
+# 	building_modifiers = {
+# 		workforce_scaled = {
+# 			building_input_artillery_add = 1
+# 			building_input_oil_add = 1
+# 		}
+# 		throughput_scaled = {
+# 			unit_offense_add = 50
+# 		}
+# 		unscaled = {
+# 			unit_morale_damage_mult = 0.5
+# 			unit_kill_rate_add = 0.5
+# 			unit_devastation_mult = 1
+# 			unit_provinces_captured_mult = -0.5
+# 		}
+# 	}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment_minor
+# 	}
+# }
+####
 pm_man_o_wars = {
 	texture = "gfx/interface/icons/production_method_icons/man_o_wars.dds"
 	building_modifiers = {

@@ -1,96 +1,108 @@
-﻿pmg_organization = {
+﻿pmg_type = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_irregular_infantry
-		pm_line_infantry
-		pm_skirmish_infantry
-		pm_trench_infantry
-		pm_squad_infantry
-		pm_mechanized_infantry
+		pm_inf
+		pm_cav
+		pm_arty
+		pm_non_west
 	}
 }
 
-pmg_artillery = {
+pmg_main_force = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_no_artillery
-		pm_cannon_artillery
-		pm_mobile_artillery
-		pm_shrapnel_artillery
-		pm_siege_artillery
+		pm_napoleon_line
+		pm_late_line
+		pm_flexible
+		pm_early_trench
+		pm_late_trench
+		pm_squads
+		pm_cavalry
+		pm_hussards
+		pm_dragoons
+		pm_cuirassiers
+		pm_light
+		pm_medium
+		pm_heavy
+		pm_tribes
+		pm_feudal
+		pm_irregulars
 	}
 }
 
-pmg_reconaissance = {
+pmg_offense_support = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_cavalry_scouts
-		pm_bicycle_messengers
-		pm_motorized_recon
-		pm_aerial_recon
+		pm_none_os
+		pm_scirmishers
+		pm_assault_eng
+		pm_stormtroopers
+		pm_flame
+		pm_gas
+		pm_tank
+		pm_guard
+		pm_mortars
+		pm_gatling
+		pm_siege
+		pm_elite_warriors
+		pm_advisers
+		pm_mercs
 	}
 }
 
-pmg_specialist_companies = {
+pmg_defense_support = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_no_specialists
-		pm_machine_gunners
-		pm_infiltrators
-		pm_flamethrower_company
-		pm_chemical_weapons_specialists
+		pm_none_ds
+		pm_mg
+		pm_engineers
+		pm_armtrain
+		pm_old_arty
+		pm_local_militias
 	}
 }
 
-pmg_organization_conscription = {
+pmg_recon = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_irregular_infantry_conscription
-		pm_line_infantry_conscription
-		pm_skirmish_infantry_conscription
-		pm_trench_infantry_conscription
-		pm_squad_infantry_conscription
-		pm_mechanized_infantry_conscription
+		pm_jagers_nonwest
+		pm_cav_scouts_nonwest
+		pm_locals
+		pm_jagers
+		pm_cav_scouts
+		pm_balloon
+		pm_armored_cars
+		pm_planes
+		pm_observers
 	}
 }
 
-pmg_artillery_conscription = {
+pmg_weapon = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_no_artillery_conscription
-		pm_cannon_artillery_conscription
-		pm_mobile_artillery_conscription
-		pm_shrapnel_artillery_conscription
-		pm_siege_artillery_conscription
-	}
-}
-
-pmg_reconaissance_conscription = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
-	production_methods = {
-		pm_cavalry_scouts_conscription
-		pm_bicycle_messengers_conscription
-		pm_motorized_recon_conscription
-		pm_aerial_recon_conscription
-	}
-}
-
-pmg_specialist_companies_conscription = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
-	production_methods = {
-		pm_no_specialists_conscription
-		pm_machine_gunners_conscription
-		pm_infiltrators_conscription
-		pm_flamethrower_company_conscription
-		pm_chemical_weapons_specialists_conscription
+		pm_old_weapons
+		pm_musket
+		pm_needle
+		pm_capsule
+		pm_breach_load_rifle
+		pm_cartridge
+		pm_bolt_action
+		pm_cold_weapons
+		pm_pistols
+		pm_early_carbines
+		pm_revolvers
+		pm_carbines
+		pm_muzzle_load_gun
+		pm_rifled_gun
+		pm_breach_load_gun
+		pm_projectile
+		pm_recoil_system
 	}
 }
 
@@ -104,6 +116,140 @@ pmg_medical_aid = {
 	}
 }
 
+pmg_log = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_horse_log
+		pm_trains_log
+		pm_moto_log
+	}
+}
+
+pmg_com = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_messanger
+		pm_telegraph
+		pm_radio
+		pm_telephone
+	}
+}
+
+pmg_type_cons = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_inf_cons
+		pm_non_west_cons
+	}
+}
+
+pmg_main_force_cons = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_napoleon_line_cons
+		pm_late_line_cons
+		pm_flexible_cons
+		pm_early_trench_cons
+		pm_late_trench_cons
+		pm_squads_cons
+		pm_tribes_cons
+		pm_feudal_cons
+		pm_irregulars_cons
+	}
+}
+
+# pmg_organization = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_irregular_infantry
+# 		pm_line_infantry
+# 		pm_skirmish_infantry
+# 		pm_trench_infantry
+# 		pm_squad_infantry
+# 		pm_mechanized_infantry
+# 	}
+# }
+# pmg_artillery = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_no_artillery
+# 		pm_cannon_artillery
+# 		pm_mobile_artillery
+# 		pm_shrapnel_artillery
+# 		pm_siege_artillery
+# 	}
+# }
+# pmg_reconaissance = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_cavalry_scouts
+# 		pm_bicycle_messengers
+# 		pm_motorized_recon
+# 		pm_aerial_recon
+# 	}
+# }
+# pmg_specialist_companies = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_no_specialists
+# 		pm_machine_gunners
+# 		pm_infiltrators
+# 		pm_flamethrower_company
+# 		pm_chemical_weapons_specialists
+# 	}
+# }
+# pmg_organization_conscription = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_irregular_infantry_conscription
+# 		pm_line_infantry_conscription
+# 		pm_skirmish_infantry_conscription
+# 		pm_trench_infantry_conscription
+# 		pm_squad_infantry_conscription
+# 		pm_mechanized_infantry_conscription
+# 	}
+# }
+# pmg_artillery_conscription = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_no_artillery_conscription
+# 		pm_cannon_artillery_conscription
+# 		pm_mobile_artillery_conscription
+# 		pm_shrapnel_artillery_conscription
+# 		pm_siege_artillery_conscription
+# 	}
+# }
+# pmg_reconaissance_conscription = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_cavalry_scouts_conscription
+# 		pm_bicycle_messengers_conscription
+# 		pm_motorized_recon_conscription
+# 		pm_aerial_recon_conscription
+# 	}
+# }
+# pmg_specialist_companies_conscription = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+# 	ai_selection = most_productive
+# 	production_methods = {
+# 		pm_no_specialists_conscription
+# 		pm_machine_gunners_conscription
+# 		pm_infiltrators_conscription
+# 		pm_flamethrower_company_conscription
+# 		pm_chemical_weapons_specialists_conscription
+# 	}
+# }
 pmg_ship_class = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive

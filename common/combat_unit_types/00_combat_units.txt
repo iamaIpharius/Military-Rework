@@ -1,0 +1,519 @@
+﻿combat_unit_regular = {
+	max_manpower = 2000
+	type = army
+	icon = "gfx/interface/icons/generic_icons/battalions.dds"
+	# List images in priority order, since only the first matching image will be chosen
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_tank
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mechanized_infantry.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_siege
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_siege_artillery.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				OR = {
+					has_active_production_method = pm_late_trench
+					has_active_production_method = pm_early_trench
+					has_active_production_method = pm_squad
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_trench_infantry.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_mobile_artillery
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_rifled_gun
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_generic.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_late_line
+						has_active_production_method = pm_napoleon_line
+						has_active_production_method = pm_flexible
+					}
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_late_line
+						has_active_production_method = pm_napoleon_line
+						has_active_production_method = pm_flexible
+					}
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_late_line
+						has_active_production_method = pm_napoleon_line
+						has_active_production_method = pm_flexible
+					}
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_late_line
+						has_active_production_method = pm_napoleon_line
+						has_active_production_method = pm_flexible
+					}
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				OR = {
+					has_active_production_method = pm_late_line
+					has_active_production_method = pm_napoleon_line
+					has_active_production_method = pm_flexible
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_tribes
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_feudal
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_irregulars
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_napoleon_line
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_napoleon_line
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+	# Fallback if nothing else matches
+	combat_unit_image = {
+		trigger = {
+			always = yes
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+}
+
+combat_unit_conscript = {
+	max_manpower = 1000
+	type = army
+	icon = "gfx/interface/icons/generic_icons/battalions.dds"
+	# List images in priority order, since only the first matching image will be chosen
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_tank
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mechanized_infantry.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_siege
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_siege_artillery.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				OR = {
+					has_active_production_method = pm_early_trench_cons
+					has_active_production_method = pm_late_trench_cons
+					has_active_production_method = pm_squads_cons
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_trench_infantry.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_rifled_gun
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_rifled_gun
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_mobile_artillery_generic.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_napoleon_line_cons
+						has_active_production_method = pm_late_line_cons
+						has_active_production_method = pm_flexible_cons
+					}
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_napoleon_line_cons
+						has_active_production_method = pm_late_line_cons
+						has_active_production_method = pm_flexible_cons
+					}
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_napoleon_line_cons
+						has_active_production_method = pm_late_line_cons
+						has_active_production_method = pm_flexible_cons
+					}
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					OR = {
+						has_active_production_method = pm_napoleon_line_cons
+						has_active_production_method = pm_late_line_cons
+						has_active_production_method = pm_flexible_cons
+					}
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				OR = {
+					has_active_production_method = pm_napoleon_line_cons
+					has_active_production_method = pm_late_line_cons
+					has_active_production_method = pm_flexible_cons
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_tribes_cons
+				}
+				culture = {
+					has_culture_graphics = african
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_african.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_feudal_cons
+				}
+				culture = {
+					has_culture_graphics = asian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_asian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_napoleon_line_cons
+				}
+				culture = {
+					has_culture_graphics = european
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_european.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			AND = {
+				building = {
+					has_active_production_method = pm_irregulars_cons
+				}
+				culture = {
+					has_culture_graphics = mideast_indian
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_irregular_infantry_mideast_indian.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_feudal_cons
+				has_active_production_method = pm_irregulars_cons
+				has_active_production_method = pm_tribes_cons
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+	# Fallback if nothing else matches
+	combat_unit_image = {
+		trigger = {
+			always = yes
+		}
+		texture = "gfx/unit_illustrations/unit_battalion_line_infantry_generic.dds"
+	}
+}
+
+combat_unit_flotilla = {
+	max_manpower = 1000
+	type = navy
+	icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_man_o_wars
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_flotilla_ship_of_the_line.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				OR = {
+					has_active_production_method = pm_ironclads
+					has_active_production_method = pm_monitors
+					has_active_production_method = pm_dreadnoughts
+				}
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_flotilla_ironclad_ship.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			building = {
+				has_active_production_method = pm_battleships
+			}
+		}
+		texture = "gfx/unit_illustrations/unit_flotilla_battleship.dds"
+	}
+}
