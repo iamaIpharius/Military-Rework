@@ -32,11 +32,11 @@ pmg_main_force = {
 	}
 }
 
-pmg_offense_support = {
+pmg_support = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
 	ai_selection = most_productive
 	production_methods = {
-		pm_none_os
+		pm_none
 		pm_scirmishers
 		pm_assault_eng
 		pm_stormtroopers
@@ -50,14 +50,6 @@ pmg_offense_support = {
 		pm_elite_warriors
 		pm_advisers
 		pm_mercs
-	}
-}
-
-pmg_defense_support = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
-	production_methods = {
-		pm_none_ds
 		pm_mg
 		pm_engineers
 		pm_armtrain

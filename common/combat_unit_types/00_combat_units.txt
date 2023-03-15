@@ -1,5 +1,5 @@
 ﻿combat_unit_regular = {
-	max_manpower = 2000
+	max_manpower = 1000
 	type = army
 	icon = "gfx/interface/icons/generic_icons/battalions.dds"
 	# List images in priority order, since only the first matching image will be chosen
@@ -25,7 +25,7 @@
 				OR = {
 					has_active_production_method = pm_late_trench
 					has_active_production_method = pm_early_trench
-					has_active_production_method = pm_squad
+					has_active_production_method = pm_squads
 				}
 			}
 		}
@@ -74,7 +74,7 @@
 		trigger = {
 			AND = {
 				building = {
-					has_active_production_method = pm_mobile_artillery
+					has_active_production_method = pm_rifled_gun
 				}
 				culture = {
 					has_culture_graphics = mideast_indian

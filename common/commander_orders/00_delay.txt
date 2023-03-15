@@ -1,5 +1,5 @@
 ﻿delay_order = {
-	texture = "gfx/interface/icons/commander_order_icons/unused/delay.dds"
+	texture = "gfx/interface/icons/commander_order_icons/unused/delay1.dds"
 	military_type = army
 	possible = {
 		error_check = {
