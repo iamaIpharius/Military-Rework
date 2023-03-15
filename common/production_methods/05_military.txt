@@ -48,6 +48,7 @@ pm_napoleon_line = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -83,6 +84,7 @@ pm_late_line = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 15
 			unit_defense_add = 15
 		}
@@ -121,6 +123,7 @@ pm_flexible = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 10
 			unit_offense_add = 18
 			unit_defense_add = 20
 		}
@@ -159,6 +162,7 @@ pm_early_trench = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 10
 			unit_offense_add = 22
 			unit_defense_add = 25
 		}
@@ -197,6 +201,7 @@ pm_late_trench = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 8
 			unit_offense_add = 26
 			unit_defense_add = 30
 		}
@@ -235,6 +240,7 @@ pm_squads = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 8
 			unit_offense_add = 30
 			unit_defense_add = 35
 		}
@@ -270,6 +276,7 @@ pm_cavalry = {
 			building_training_rate_add = 25
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -302,6 +309,7 @@ pm_hussards = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 15
 			unit_defense_add = 5
 		}
@@ -337,6 +345,7 @@ pm_dragoons = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -373,6 +382,7 @@ pm_cuirassiers = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 15
 			unit_defense_add = 10
 		}
@@ -410,6 +420,7 @@ pm_light = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 20
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -445,6 +456,7 @@ pm_medium = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 20
 			unit_offense_add = 15
 			unit_defense_add = 15
 		}
@@ -483,6 +495,7 @@ pm_heavy = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 20
 			unit_offense_add = 25
 			unit_defense_add = 25
 		}
@@ -517,6 +530,7 @@ pm_tribes = {
 			building_training_rate_add = 40
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 7
 			unit_defense_add = 7
 		}
@@ -548,6 +562,7 @@ pm_irregulars = {
 			building_training_rate_add = 40
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 5
 			unit_defense_add = 10
 		}
@@ -579,6 +594,7 @@ pm_feudal = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -2272,6 +2288,7 @@ pm_napoleon_line_cons = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -2307,6 +2324,7 @@ pm_late_line_cons = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 15
 			unit_defense_add = 15
 		}
@@ -2345,6 +2363,7 @@ pm_flexible_cons = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 18
 			unit_defense_add = 20
 		}
@@ -2383,6 +2402,7 @@ pm_early_trench_cons = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 10
 			unit_offense_add = 22
 			unit_defense_add = 25
 		}
@@ -2421,6 +2441,7 @@ pm_late_trench_cons = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 10
 			unit_offense_add = 26
 			unit_defense_add = 30
 		}
@@ -2459,6 +2480,7 @@ pm_squads_cons = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 10
 			unit_offense_add = 30
 			unit_defense_add = 35
 		}
@@ -2493,6 +2515,7 @@ pm_tribes_cons = {
 			building_training_rate_add = 40
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 7
 			unit_defense_add = 7
 		}
@@ -2524,6 +2547,7 @@ pm_irregulars_cons = {
 			building_training_rate_add = 40
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 5
 			unit_defense_add = 10
 		}
@@ -2555,6 +2579,7 @@ pm_feudal_cons = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
+			unit_morale_loss_add = 15
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
