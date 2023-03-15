@@ -12,10 +12,10 @@
 		}
 	}
 	modifier = {
-		character_attrition_risk_add = 0.4
+		character_attrition_risk_add = 0.2
 		unit_morale_damage_mult = 0.5
-		unit_kill_rate_add = 0.5
-		unit_recovery_rate_add = -0.5
+		unit_kill_rate_add = 0.3
+		unit_recovery_rate_add = -0.4
 		unit_provinces_lost_mult = -0.4
 	}
 	experience = 0.05	# This much experience per week while executing Order
