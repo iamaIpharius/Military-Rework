@@ -12,8 +12,8 @@
 		}
 	}
 	modifier = {
-		character_attrition_risk_add = 0.2
-		front_enemy_advancement_speed_mult = -0.5
+		character_attrition_risk_add = 0.05
+		front_enemy_advancement_speed_mult = -0.65
 		unit_morale_damage_mult = -0.2
 		unit_kill_rate_add = -0.5
 		unit_recovery_rate_add = 0.3
