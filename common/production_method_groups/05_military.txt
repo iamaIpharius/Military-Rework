@@ -3,8 +3,6 @@
 	ai_selection = most_productive
 	production_methods = {
 		pm_inf
-		pm_cav
-		pm_arty
 		pm_non_west
 	}
 }
@@ -19,13 +17,6 @@ pmg_main_force = {
 		pm_early_trench
 		pm_late_trench
 		pm_squads
-		pm_cavalry
-		pm_hussards
-		pm_dragoons
-		pm_cuirassiers
-		pm_light
-		pm_medium
-		pm_heavy
 		pm_tribes
 		pm_feudal
 		pm_irregulars
@@ -43,10 +34,6 @@ pmg_support = {
 		pm_flame
 		pm_gas
 		pm_tank
-		pm_guard
-		pm_mortars
-		pm_gatling
-		pm_siege
 		pm_elite_warriors
 		pm_advisers
 		pm_mercs
@@ -68,9 +55,7 @@ pmg_recon = {
 		pm_jagers
 		pm_cav_scouts
 		pm_balloon
-		pm_armored_cars
 		pm_planes
-		pm_observers
 	}
 }
 
@@ -85,16 +70,6 @@ pmg_weapon = {
 		pm_breach_load_rifle
 		pm_cartridge
 		pm_bolt_action
-		pm_cold_weapons
-		pm_pistols
-		pm_early_carbines
-		pm_revolvers
-		pm_carbines
-		pm_muzzle_load_gun
-		pm_rifled_gun
-		pm_breach_load_gun
-		pm_projectile
-		pm_recoil_system
 	}
 }
 
@@ -283,5 +258,108 @@ pmg_naval_theory = {
 		pm_jeune_ecole
 		pm_sea_lane_strategies
 		pm_battlefleet_tactics
+	}
+}
+
+pmg_type_cav = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_cav
+	}
+}
+
+pmg_main_force_cav = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_cavalry
+		pm_hussards
+		pm_dragoons
+		pm_cuirassiers
+	}
+}
+
+pmg_support_cav = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_none
+		pm_tank
+		pm_guard
+		pm_armtrain
+	}
+}
+
+pmg_recon_cav = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_cav_scouts
+		pm_balloon
+		pm_armored_cars
+		pm_planes
+	}
+}
+
+pmg_weapon_cav = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_cold_weapons
+		pm_pistols
+		pm_early_carbines
+		pm_revolvers
+		pm_carbines
+	}
+}
+
+pmg_type_arty = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_arty
+	}
+}
+
+pmg_main_force_arty = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_light
+		pm_medium
+		pm_heavy
+	}
+}
+
+pmg_support_arty = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_none
+		pm_mortars
+		pm_gatling
+		pm_siege
+	}
+}
+
+pmg_recon_arty = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_balloon
+		pm_observers
+	}
+}
+
+pmg_weapon_arty = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_muzzle_load_gun
+		pm_rifled_gun
+		pm_breach_load_gun
+		pm_projectile
+		pm_recoil_system
 	}
 }
