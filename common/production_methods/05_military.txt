@@ -328,7 +328,7 @@ pm_dragoons = {
 		}
 		workforce_scaled = {
 			building_input_groceries_add = 1
-			building_input_clothes_add = 1
+			building_input_luxury_clothes_add = 1
 			building_input_grain_add = 1
 		}
 		level_scaled = {
