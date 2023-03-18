@@ -329,6 +329,9 @@ pmg_main_force_arty = {
 		pm_light
 		pm_medium
 		pm_heavy
+		pm_heavy_2
+		pm_heavy_3
+		pm_heavy_4
 	}
 }
 

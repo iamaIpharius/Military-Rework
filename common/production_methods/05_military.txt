@@ -6,22 +6,6 @@
 	}
 }
 
-pm_cav = {
-	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-	is_default = yes
-	unlocking_technologies = {
-		westernization
-	}
-}
-
-pm_arty = {
-	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
-	is_default = yes
-	unlocking_technologies = {
-		westernization
-	}
-}
-
 pm_non_west = {
 	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
 	is_default = yes
@@ -123,7 +107,7 @@ pm_flexible = {
 			building_training_rate_add = 30
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 10
+			unit_morale_loss_add = 15
 			unit_offense_add = 18
 			unit_defense_add = 20
 		}
@@ -162,7 +146,7 @@ pm_early_trench = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 10
+			unit_morale_loss_add = 15
 			unit_offense_add = 22
 			unit_defense_add = 25
 		}
@@ -201,7 +185,7 @@ pm_late_trench = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 8
+			unit_morale_loss_add = 15
 			unit_offense_add = 26
 			unit_defense_add = 30
 		}
@@ -240,7 +224,7 @@ pm_squads = {
 			building_training_rate_add = 20
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 8
+			unit_morale_loss_add = 15
 			unit_offense_add = 30
 			unit_defense_add = 35
 		}
@@ -252,6 +236,14 @@ pm_squads = {
 	}
 	timed_modifiers = {
 		pm_offense_defense_readjustment
+	}
+}
+
+pm_cav = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
 	}
 }
 
@@ -276,7 +268,7 @@ pm_cavalry = {
 			building_training_rate_add = 25
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 15
+			unit_morale_loss_add = 10
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -300,7 +292,7 @@ pm_hussards = {
 		}
 		workforce_scaled = {
 			building_input_groceries_add = 1
-			building_input_clothes_add = 1
+			building_input_luxury_clothes_add = 1
 			building_input_grain_add = 1
 		}
 		level_scaled = {
@@ -309,7 +301,7 @@ pm_hussards = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 15
+			unit_morale_loss_add = 10
 			unit_offense_add = 15
 			unit_defense_add = 5
 		}
@@ -345,7 +337,7 @@ pm_dragoons = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 15
+			unit_morale_loss_add = 10
 			unit_offense_add = 10
 			unit_defense_add = 10
 		}
@@ -372,7 +364,7 @@ pm_cuirassiers = {
 		}
 		workforce_scaled = {
 			building_input_groceries_add = 1
-			building_input_clothes_add = 1
+			building_input_luxury_clothes_add = 1
 			building_input_grain_add = 1
 			building_input_iron_add = 1
 		}
@@ -382,7 +374,7 @@ pm_cuirassiers = {
 			building_training_rate_add = 15
 		}
 		throughput_scaled = {
-			unit_morale_loss_add = 15
+			unit_morale_loss_add = 10
 			unit_offense_add = 15
 			unit_defense_add = 10
 		}
@@ -394,6 +386,14 @@ pm_cuirassiers = {
 	}
 	timed_modifiers = {
 		pm_offense_defense_readjustment
+	}
+}
+
+pm_arty = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = yes
+	unlocking_technologies = {
+		westernization
 	}
 }
 
@@ -435,6 +435,9 @@ pm_light = {
 pm_medium = {
 	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
 	is_default = no
+	unlocking_technologies = {
+		general_staff
+	}
 	unlocking_production_methods = {
 		pm_arty
 	}
@@ -474,6 +477,9 @@ pm_medium = {
 pm_heavy = {
 	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
 	is_default = no
+	unlocking_technologies = {
+		enlistment_offices
+	}
 	unlocking_production_methods = {
 		pm_arty
 	}
@@ -498,6 +504,132 @@ pm_heavy = {
 			unit_morale_loss_add = 20
 			unit_offense_add = 25
 			unit_defense_add = 25
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_heavy_2 = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		breech_loading_artillery
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.7
+			unit_devastation_mult = 0.25
+			unit_kill_rate_add = 0.6
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+			building_input_artillery_add = 2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+			building_training_rate_add = 15
+		}
+		throughput_scaled = {
+			unit_morale_loss_add = 20
+			unit_offense_add = 30
+			unit_defense_add = 30
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_heavy_3 = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		defense_in_depth
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.5
+			unit_provinces_captured_mult = -0.7
+			unit_devastation_mult = 0.4
+			unit_kill_rate_add = 0.7
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+			building_input_artillery_add = 2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+			building_training_rate_add = 10
+		}
+		throughput_scaled = {
+			unit_morale_loss_add = 30
+			unit_offense_add = 40
+			unit_defense_add = 40
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_army_power_projection_add = 5
+		}
+	}
+	timed_modifiers = {
+		pm_offense_defense_readjustment
+	}
+}
+
+pm_heavy_4 = {
+	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+	is_default = no
+	unlocking_technologies = {
+		concrete_fortifications
+	}
+	unlocking_production_methods = {
+		pm_arty
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_provinces_lost_mult = -0.6
+			unit_provinces_captured_mult = -0.8
+			unit_devastation_mult = 0.5
+			unit_kill_rate_add = 1
+		}
+		workforce_scaled = {
+			building_input_groceries_add = 1
+			building_input_clothes_add = 1
+			building_input_artillery_add = 2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 700
+			building_employment_officers_add = 300
+			building_training_rate_add = 10
+		}
+		throughput_scaled = {
+			unit_morale_loss_add = 30
+			unit_offense_add = 50
+			unit_defense_add = 50
 		}
 	}
 	country_modifiers = {
@@ -824,13 +956,13 @@ pm_guard = {
 			building_input_small_arms_add = 0.5
 			building_input_grain_add = 0.5
 			building_input_steel_add = 0.5
-			building_input_clothes_add = 0.5
+			building_input_luxury_clothes_add = 0.5
 		}
 		level_scaled = {
 		}
 		throughput_scaled = {
-			unit_offense_add = 10
-			unit_defense_add = 10
+			unit_offense_add = 15
+			unit_defense_add = 15
 		}
 	}
 	country_modifiers = {
@@ -949,7 +1081,7 @@ pm_elite_warriors = {
 		}
 		workforce_scaled = {
 			building_input_iron_add = 0.5
-			building_input_clothes_add = 0.5
+			building_input_luxury_clothes_add = 0.5
 		}
 		level_scaled = {
 		}
@@ -981,7 +1113,7 @@ pm_advisers = {
 		unscaled = {
 		}
 		workforce_scaled = {
-			building_input_clothes_add = 1
+			building_input_luxury_clothes_add = 1
 		}
 		level_scaled = {
 		}
@@ -1364,7 +1496,7 @@ pm_balloon = {
 			unit_kill_rate_add = 0.1
 		}
 		workforce_scaled = {
-			building_input_tools_add = 1
+			building_input_tools_add = 1.5
 			building_input_clothes_add = 0.2
 		}
 		level_scaled = {
@@ -2205,7 +2337,7 @@ pm_telegraph = {
 			building_input_tools_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.15
+			unit_morale_loss_mult = -0.02
 		}
 	}
 }
@@ -2227,7 +2359,7 @@ pm_radio = {
 			building_input_radios_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.3
+			unit_morale_loss_mult = -0.04
 		}
 	}
 }
@@ -2249,7 +2381,7 @@ pm_telephone = {
 			building_input_telephones_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.45
+			unit_morale_loss_mult = -0.06
 		}
 	}
 }

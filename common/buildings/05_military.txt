@@ -23,7 +23,7 @@ building_barracks = {
 }
 
 building_cav = {
-	building_group = bg_military
+	building_group = bg_army
 	recruits_combat_unit = combat_unit_cav
 	texture = "gfx/interface/icons/building_icons/building_barracks_cav.dds"
 	city_type = city
@@ -45,7 +45,7 @@ building_cav = {
 }
 
 building_arty = {
-	building_group = bg_military
+	building_group = bg_army
 	recruits_combat_unit = combat_unit_arty
 	texture = "gfx/interface/icons/building_icons/building_barracks_arty.dds"
 	city_type = city
