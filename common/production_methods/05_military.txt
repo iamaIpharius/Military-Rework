@@ -2337,7 +2337,7 @@ pm_telegraph = {
 			building_input_tools_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.02
+			unit_morale_loss_mult = -0.1
 		}
 	}
 }
@@ -2359,7 +2359,7 @@ pm_radio = {
 			building_input_radios_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.04
+			unit_morale_loss_mult = -0.2
 		}
 	}
 }
@@ -2381,7 +2381,7 @@ pm_telephone = {
 			building_input_telephones_add = 1
 		}
 		unscaled = {
-			unit_morale_loss_mult = -0.06
+			unit_morale_loss_mult = -0.3
 		}
 	}
 }
