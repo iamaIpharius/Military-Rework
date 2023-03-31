@@ -12,12 +12,10 @@
 		}
 	}
 	modifier = {
+		
 		character_attrition_risk_add = 0.25
-		unit_provinces_captured_mult = -0.5
-		unit_morale_damage_mult = 0.5
+		unit_provinces_captured_mult = -1
 		front_advancement_speed_add = 5
-		unit_kill_rate_add = 0.5
-		unit_recovery_rate_add = -0.5
 	}
 	experience = 0.05	# This much experience per week while executing Order
 	allows_advance = yes

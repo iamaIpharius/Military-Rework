@@ -2,6 +2,9 @@
 	max_manpower = 1000
 	type = army
 	icon = "gfx/interface/icons/generic_icons/battalions.dds"
+	counters = {
+		combat_unit_cav = 1
+	}
 	# List images in priority order, since only the first matching image will be chosen
 	combat_unit_image = {
 		trigger = {
@@ -244,6 +247,9 @@ combat_unit_cav = {
 	max_manpower = 1000
 	type = army
 	icon = "gfx/interface/icons/generic_icons/battalions_cav.dds"
+	counters = {
+		combat_unit_arty = 1
+	}
 	# List images in priority order, since only the first matching image will be chosen
 	# Fallback if nothing else matches
 	combat_unit_image = {
@@ -258,6 +264,9 @@ combat_unit_arty = {
 	max_manpower = 1000
 	type = army
 	icon = "gfx/interface/icons/generic_icons/battalions_arty.dds"
+	counters = {
+		combat_unit_regular = 1
+	}
 	# List images in priority order, since only the first matching image will be chosen
 	# Fallback if nothing else matches
 	combat_unit_image = {

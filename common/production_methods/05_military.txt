@@ -4,11 +4,46 @@
 	unlocking_technologies = {
 		westernization
 	}
+	building_modifiers = {
+		unscaled = {
+			unit_offense_elevated_mult = -0.3
+			unit_defense_elevated_mult = 0.3
+			unit_offense_forested_mult = -0.3
+			unit_defense_forested_mult = 0.3
+			unit_offense_developed_mult = -0.1
+			unit_defense_developed_mult = 0.1
+			unit_offense_hazardous_mult = -0.2
+			unit_defense_hazardous_mult = 0.2
+			unit_offense_flat_mult = 0
+			unit_defense_flat_mult = 0
+			unit_offense_water_mult = -0.2
+			unit_defense_water_mult = 0.3
+		}
+	}
 }
 
 pm_non_west = {
 	texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
 	is_default = yes
+	unlocking_technologies = {
+
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_offense_elevated_mult = 0.1
+			unit_defense_elevated_mult = 1
+			unit_offense_forested_mult = 0.1
+			unit_defense_forested_mult = 1
+			unit_offense_developed_mult = -0.1
+			unit_defense_developed_mult = 1
+			unit_offense_hazardous_mult = 0.2
+			unit_defense_hazardous_mult = 0.2
+			unit_offense_flat_mult = -0.1
+			unit_defense_flat_mult = -0.1
+			unit_offense_water_mult = -0.2
+			unit_defense_water_mult = 1
+		}
+	}
 }
 
 pm_napoleon_line = {
@@ -245,6 +280,22 @@ pm_cav = {
 	unlocking_technologies = {
 		westernization
 	}
+	building_modifiers = {
+		unscaled = {
+			unit_offense_elevated_mult = -0.3
+			unit_defense_elevated_mult = -0.1
+			unit_offense_forested_mult = -0.3
+			unit_defense_forested_mult = -0.3
+			unit_offense_developed_mult = -0.1
+			unit_defense_developed_mult = -0.1
+			unit_offense_hazardous_mult = -0.2
+			unit_defense_hazardous_mult = -0.2
+			unit_offense_flat_mult = 0.4
+			unit_defense_flat_mult = 0.2
+			unit_offense_water_mult = -0.4
+			unit_defense_water_mult = 0.1
+		}
+	}
 }
 
 pm_cavalry = {
@@ -394,6 +445,22 @@ pm_arty = {
 	is_default = yes
 	unlocking_technologies = {
 		westernization
+	}
+	building_modifiers = {
+		unscaled = {
+			unit_offense_elevated_mult = -0.3
+			unit_defense_elevated_mult = 0.1
+			unit_offense_forested_mult = -0.3
+			unit_defense_forested_mult = -0.1
+			unit_offense_developed_mult = -0.1
+			unit_defense_developed_mult = 0.2
+			unit_offense_hazardous_mult = -0.2
+			unit_defense_hazardous_mult = -0.2
+			unit_offense_flat_mult = 0.1
+			unit_defense_flat_mult = 0.1
+			unit_offense_water_mult = -0.2
+			unit_defense_water_mult = 0.3
+		}
 	}
 }
 
@@ -755,6 +822,12 @@ pm_scirmishers = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_forested_mult = 0.1
+			unit_defense_forested_mult = 0.1
+			unit_offense_elevated_mult = 0.05
+			unit_defense_elevated_mult = 0.1
+			unit_offense_hazardous_mult = 0.05
+			unit_defense_hazardous_mult = 0.05
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.2
@@ -787,6 +860,9 @@ pm_assault_eng = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_forested_mult = 0.15
+			unit_offense_elevated_mult = 0.15
+			unit_offense_hazardous_mult = 0.15
 		}
 		workforce_scaled = {
 			building_input_explosives_add = 0.5
@@ -817,6 +893,7 @@ pm_stormtroopers = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_developed_mult = 0.3
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.5
@@ -852,6 +929,8 @@ pm_flame = {
 			unit_devastation_mult = 0.05
 			unit_kill_rate_add = 0.05
 			unit_morale_damage_mult = 0.15
+			unit_offense_developed_mult = 0.3
+			unit_offense_forested_mult = 0.3
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.5
@@ -886,6 +965,7 @@ pm_gas = {
 			unit_devastation_mult = 0.15
 			unit_kill_rate_add = 0.5
 			unit_morale_damage_mult = 0.25
+			unit_offense_mult = 0.2
 		}
 		workforce_scaled = {
 			building_input_oil_add = 0.5
@@ -920,6 +1000,7 @@ pm_tank = {
 		unscaled = {
 			unit_devastation_mult = 0.15
 			unit_morale_damage_mult = 0.25
+			unit_offense_flat_mult = 1
 		}
 		workforce_scaled = {
 			building_input_tanks_add = 1
@@ -987,6 +1068,8 @@ pm_mortars = {
 	building_modifiers = {
 		unscaled = {
 			unit_devastation_mult = 0.02
+			unit_offense_elevated_mult = 0.1
+			unit_defense_elevated_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_artillery_add = 0.2
@@ -1018,6 +1101,8 @@ pm_gatling = {
 	building_modifiers = {
 		unscaled = {
 			unit_kill_rate_add = 0.1
+			unit_defense_flat_mult = 0.2
+			unit_offense_flat_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_artillery_add = 0.5
@@ -1175,6 +1260,12 @@ pm_engineers = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_defense_flat_mult = 0.1
+			unit_defense_elevated_mult = 0.2
+			unit_defense_forested_mult = 0.2
+			unit_defense_hazardous_mult = 0.2
+			unit_defense_developed_mult = 0.2
+			unit_defense_water_mult = 0.2
 		}
 		workforce_scaled = {
 			building_input_tools_add = 0.5
@@ -1205,6 +1296,7 @@ pm_mg = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_defense_mult = 0.05
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 1
@@ -1238,6 +1330,7 @@ pm_armtrain = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_flat_mult = 0.1
 			unit_provinces_captured_mult = -0.5
 			unit_provinces_lost_mult = -0.5
 		}
@@ -1363,6 +1456,9 @@ pm_jagers_nonwest = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_elevated_mult = 0.1
+			unit_offense_forested_mult = 0.1
+			unit_offense_hazardous_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.2
@@ -1394,6 +1490,7 @@ pm_cav_scouts_nonwest = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_flat_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.2
@@ -1426,6 +1523,9 @@ pm_jagers = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_elevated_mult = 0.1
+			unit_offense_forested_mult = 0.1
+			unit_offense_hazardous_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.2
@@ -1459,6 +1559,7 @@ pm_cav_scouts = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_flat_mult = 0.1
 		}
 		workforce_scaled = {
 			building_input_small_arms_add = 0.2
@@ -1528,6 +1629,7 @@ pm_armored_cars = {
 	}
 	building_modifiers = {
 		unscaled = {
+			unit_offense_flat_mult = 0.1
 			unit_morale_damage_mult = 0.1
 		}
 		workforce_scaled = {

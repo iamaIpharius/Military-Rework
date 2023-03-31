@@ -5,7 +5,7 @@ front_commander_pick_weight = {
 	value = root.num_units
 	if = {
 		limit = {
-			has_commander_order = defend
+			scope:is_advancing_side = no
 			commander_pm_usage = {
 				target = root.owner
 				production_method = pm_late_trench
@@ -17,42 +17,42 @@ front_commander_pick_weight = {
 	if = {
 		limit = {
 			has_trait = stalwart_defender
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		add = 5
 	}
 	else_if = {
 		limit = {
 			has_trait = trench_rat
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		add = 10
 	}
 	else_if = {
 		limit = {
 			has_trait = defense_in_depth_specialist
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		add = 15
 	}
 	if = {
 		limit = {
 			has_trait = basic_defensive_strategist
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		multiply = 5
 	}
 	else_if = {
 		limit = {
 			has_trait = experienced_defensive_strategist
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		multiply = 10
 	}
 	else_if = {
 		limit = {
 			has_trait = expert_defensive_strategist
-			has_commander_order = defend
+			scope:is_advancing_side = no
 		}
 		multiply = 15
 	}
@@ -113,7 +113,6 @@ front_commander_pick_weight = {
 	if = {
 		limit = {
 			scope:is_advancing_side = no
-			has_commander_order = defend
 		}
 		multiply = 4
 	}

@@ -13,7 +13,6 @@
 	}
 	modifier = {
 		character_attrition_risk_add = 0.1
-		unit_army_defense_mult = 0.1
 	}
 	experience = 0.05	# This much experience per week while executing Order
 	causes_general_travel = yes
