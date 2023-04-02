@@ -1,5 +1,9 @@
 ﻿### ERA 6
 westernization = {
+	unlocking_technologies = {
+		rationalism
+		urbanization
+	}
 	era = era_6
 	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
 	category = society
@@ -18,18 +22,17 @@ cartridge = {
 		value = 1.5		# Important tech in general
 	}
 }
+
 bolt_action_rifles = {
 	# Unlocks Bolt Action Rifles PM in Arms Industry
 	# Global Unlock for Bolt Action Rifles PM in Barracks
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/bolt_action_rifles.dds"
 	category = military
-	
-	unlocking_technologies = {	
+	unlocking_technologies = {
 		cartridge
 	}
-	
 	ai_weight = {
-		value = 2 # important for everyone
+		value = 2		# important for everyone
 	}
 }

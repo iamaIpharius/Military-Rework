@@ -1,0 +1,221 @@
+﻿# Strategic Regions in South America
+region_brazil = {
+	graphical_culture = "latin"
+	capital_province = x7600E6
+	map_color = {
+		0.222
+		1
+		0.362
+	}
+	states = {
+		STATE_RIO_DE_JANEIRO
+		STATE_MINAS_GERAIS
+		STATE_BAHIA
+		STATE_PERNAMBUCO
+	}
+}
+
+region_andes = {
+	graphical_culture = "latin"
+	capital_province = x40E12A
+	map_color = {
+		0
+		1
+		0
+	}
+	states = {
+		STATE_POTOSI
+		STATE_SANTA_CRUZ
+		STATE_LA_PAZ
+		STATE_JUJUY
+	}
+}
+
+region_la_plata = {
+	graphical_culture = "latin"
+	capital_province = x708090
+	map_color = {
+		0
+		0.8
+		0.4
+	}
+	states = {
+		STATE_RIO_NEGRO
+		STATE_LA_PAMPA
+		STATE_SANTA_FE
+		STATE_BUENOS_AIRES
+		STATE_URUGUAY
+	}
+}
+
+region_gran_colombia = {
+	graphical_culture = "latin"
+	capital_province = xA00111
+	map_color = {
+		0.4
+		0.3
+		0.2
+	}
+	states = {
+		STATE_ANTIOQUIA
+		STATE_GUAVIARE
+		STATE_CAUCA
+		STATE_CUNDINAMARCA
+	}
+}
+
+region_amazonas = {
+	graphical_culture = "latin"
+	capital_province = x40E12A
+	map_color = {
+		0.6996
+		0.9669
+		0.42069
+	}
+	states = {
+		STATE_ACRE
+		STATE_MATO_GROSSO
+		STATE_GOIAS
+		STATE_AMAZONAS
+		STATE_PARA
+	}
+}
+
+region_patagonia = {
+	graphical_culture = "latin"
+	capital_province = x708090
+	map_color = {
+		0.42
+		0.69
+		0.42069
+	}
+	states = {
+		STATE_ARAUCANIA
+		STATE_PATAGONIA
+	}
+}
+
+region_south_atlantic = {
+	graphical_culture = "latin"
+	capital_province = x708090
+	map_color = {
+		1
+		0.8
+		0.4
+	}
+	states = {
+		STATE_SOUTH_ATLANTIC_ISLANDS
+	}
+}
+
+region_south_andes = {
+	graphical_culture = "latin"
+	capital_province = x708090
+	map_color = {
+		0.69
+		0.8
+		0.42
+	}
+	states = {
+		STATE_LOS_RIOS
+		STATE_SANTIAGO
+		STATE_TUCUMAN
+	}
+}
+
+region_south_brazil = {
+	graphical_culture = "latin"
+	capital_province = xCF1240
+	map_color = {
+		0.333
+		1
+		0.362
+	}
+	states = {
+		STATE_SAO_PAULO
+		STATE_PARANA
+		STATE_RIO_GRANDE_DO_SUL
+		STATE_SANTA_CATARINA
+	}
+}
+
+region_north_brazil = {
+	graphical_culture = "latin"
+	capital_province = x4C7633A
+	map_color = {
+		0.444
+		1
+		0.362
+	}
+	states = {
+		STATE_CEARA
+		STATE_PARAIBA
+		STATE_RIO_GRANDE_DO_NORTE
+		STATE_PIAUI
+		STATE_MARANHAO
+	}
+}
+
+region_north_andes = {
+	graphical_culture = "latin"
+	capital_province = x928ED8
+	map_color = {
+		0
+		0.96
+		0
+	}
+	states = {
+		STATE_ECUADOR
+		STATE_PASTAZA
+		STATE_CAJAMARCA
+		STATE_LIMA
+	}
+}
+
+region_north_la_plata = {
+	graphical_culture = "latin"
+	capital_province = x92BEE9
+	map_color = {
+		0
+		0.9
+		0.4
+	}
+	states = {
+		STATE_BAJO_PARAGUAY
+		STATE_CORRIENTES
+		STATE_CHACO
+		STATE_ALTO_PARAGUAY
+	}
+}
+
+region_east_gran_colombia = {
+	graphical_culture = "latin"
+	capital_province = xB0F080
+	map_color = {
+		0.4
+		0.41
+		0.2
+	}
+	states = {
+		STATE_ZULIA
+		STATE_MIRANDA
+		STATE_BOLIVAR
+		STATE_GUAYANA
+	}
+}
+
+region_coastal_ands = {
+	graphical_culture = "latin"
+	capital_province = x7984DF
+	map_color = {
+		0.7
+		0.41
+		0.2
+	}
+	states = {
+		STATE_ICA
+		STATE_AREQUIPA
+		STATE_TARAPACA
+		STATE_ANTOFAGASTA
+	}
+}

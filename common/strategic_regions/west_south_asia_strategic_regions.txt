@@ -1,0 +1,344 @@
+﻿# Strategic Regions in West and South Asia
+region_anatolia = {
+	graphical_culture = "arabic"
+	capital_province = x66B13B
+	map_color = {
+		0.25
+		0.75
+		0.25
+	}
+	states = {
+		STATE_ANKARA
+		STATE_ADANA
+		STATE_KASTAMONU
+	}
+}
+
+region_east_anatolia = {
+	graphical_culture = "arabic"
+	capital_province = x9655BD
+	map_color = {
+		0.25
+		0.95
+		0.25
+	}
+	states = {
+		STATE_CYPRUS
+		STATE_DIYARBAKIR
+		STATE_TRABZON
+		STATE_ERZURUM
+	}
+}
+
+region_west_anatolia = {
+	graphical_culture = "latin"
+	capital_province = x66B13B
+	map_color = {
+		56
+		120
+		191
+	}
+	states = {
+		STATE_HUDAVENDIGAR
+		STATE_AYDIN
+		STATE_EAST_AEGEAN_ISLANDS
+		STATE_KONYA
+	}
+}
+
+region_arabic = {
+	graphical_culture = "arabic"
+	map_color = {
+		0.1
+		0.7
+		0.1
+	}
+	states = {
+		STATE_OMAN
+		STATE_ABU_DHABI
+		STATE_YEMEN
+		STATE_HEDJAZ
+		STATE_HAIL
+		STATE_NEJD
+	}
+}
+
+region_persia = {
+	graphical_culture = "arabic"
+	map_color = {
+		119
+		105
+		225
+	}
+	states = {
+		STATE_MAZANDARAN
+		STATE_IRAKAJEMI
+		STATE_TABRIZ
+	}
+}
+
+region_east_persia = {
+	graphical_culture = "arabic"
+	map_color = {
+		119
+		135
+		225
+	}
+	states = {
+		STATE_KHORASAN
+		STATE_SISTAN
+		STATE_LARISTAN
+	}
+}
+
+region_western_persia = {
+	graphical_culture = "arabic"
+	map_color = {
+		119
+		195
+		225
+	}
+	states = {
+		STATE_ISFAHAN
+		STATE_FARS
+		STATE_KHUZESTAN
+		STATE_LURISTAN
+	}
+}
+
+region_central_asia = {
+	graphical_culture = "arabic"
+	capital_province = x8ABC27
+	map_color = {
+		0.24
+		0.65
+		0.34
+	}
+	states = {
+		STATE_SEMIRECHE
+		STATE_AKMOLINSK
+		STATE_URALSK
+	}
+}
+
+region_turkestan = {
+	graphical_culture = "arabic"
+	capital_province = x8ABC27
+	map_color = {
+		0.24
+		0.9
+		0.34
+	}
+	states = {
+		STATE_UZBEKIA
+		STATE_KHIVA
+		STATE_TURKMENIA
+		STATE_TAJIKISTAN
+		STATE_KIRGHIZIA
+	}
+}
+
+region_caucasus = {
+	capital_province = xFB38B0
+	map_color = {
+		1
+		0.1
+		0.2
+	}
+	states = {
+		STATE_KUBAN
+		STATE_ASTRAKHAN
+		STATE_DAGESTAN
+	}
+}
+
+region_caucasus_2 = {
+	graphical_culture = "arabic"
+	capital_province = xFB38B0
+	map_color = {
+		1
+		0.199
+		0.2
+	}
+	states = {
+		STATE_ARMENIA
+		STATE_AZERBAIJAN
+		STATE_KARS
+		STATE_GREATER_CAUCASUS
+	}
+}
+
+region_south_india = {
+	graphical_culture = "arabic"
+	capital_province = x9A2EF3
+	map_color = {
+		0.607
+		0.843
+		0.337
+	}
+	states = {
+		STATE_CIRCARS
+		STATE_HYDERABAD
+		STATE_NAGPUR
+		STATE_BOMBAY
+	}
+}
+
+region_deep_south_india = {
+	graphical_culture = "arabic"
+	capital_province = x9A2EF3
+	map_color = {
+		0.607
+		0.999
+		0.337
+	}
+	states = {
+		STATE_MYSORE
+		STATE_TRAVANCORE
+		STATE_MADRAS
+	}
+}
+
+region_north_india = {
+	graphical_culture = "arabic"
+	capital_province = xB39D42
+	map_color = {
+		0.392
+		0.863
+		1
+	}
+	states = {
+		STATE_DELHI
+		STATE_AWADH
+		STATE_RAJPUTANA
+		STATE_GUJARAT
+		STATE_CENTRAL_INDIA
+	}
+}
+
+region_himalayas = {
+	graphical_culture = "asian"
+	capital_province = x06698A
+	map_color = {
+		177
+		207
+		205
+	}
+	states = {
+		STATE_HIMALAYAS
+		STATE_LHASA
+		STATE_NGARI
+	}
+}
+
+region_mesopotamia = {
+	graphical_culture = "arabic"
+	map_color = {
+		0.1
+		0.69
+		0.42
+	}
+	states = {
+		STATE_DEIR_EZ_ZOR
+		STATE_BAGHDAD
+		STATE_BASRA
+		STATE_MOSUL
+	}
+}
+
+region_levant = {
+	graphical_culture = "arabic"
+	map_color = {
+		0.69
+		0.69
+		0.1
+	}
+	states = {
+		STATE_TRANSJORDAN
+		STATE_PALESTINE
+		STATE_LEBANON
+		STATE_SYRIA
+		STATE_ALEPPO
+	}
+}
+
+region_pashtunistan = {
+	graphical_culture = "arabic"
+	capital_province = xB39D42
+	map_color = {
+		0.392
+		0.863
+		0.42069
+	}
+	states = {
+		STATE_SINDH
+		STATE_PUNJAB
+		STATE_BALUCHISTAN
+		STATE_WESTERN_AFGHANISTAN
+		STATE_EASTERN_AFGHANISTAN
+
+	}
+}
+
+region_pundjab = {
+	graphical_culture = "arabic"
+	capital_province = xB39D42
+	map_color = {
+		0.392
+		0.666
+		0.42069
+	}
+	states = {
+		STATE_PASHTUNISTAN
+		STATE_PUNJAB
+		STATE_KASHMIR
+	}
+}
+
+region_bengalia = {
+	graphical_culture = "arabic"
+	capital_province = xB39D42
+	map_color = {
+		0.42
+		0.777
+		0.777
+	}
+	states = {
+		STATE_BIHAR
+		STATE_SOUTH_BENGAL
+		STATE_NORTH_BENGAL
+		STATE_ASSAM
+		STATE_ORISSA
+	}
+}
+
+region_burma = {
+	graphical_culture = "arabic"
+	capital_province = xB39D42
+	map_color = {
+		0.42
+		0.888
+		0.777
+	}
+	states = {
+		STATE_KACHIN
+		STATE_SHAN_STATES
+		STATE_BURMA
+		STATE_PEGU
+	}
+}
+
+region_uighur = {
+	graphical_culture = "arabic"
+	capital_province = x8ABC27
+	map_color = {
+		147
+		82
+		173
+	}
+	states = {
+		STATE_DZUNGARIA
+		STATE_TIANSHAN
+		STATE_JETISY
+	}
+}

@@ -1,0 +1,415 @@
+﻿# Strategic Regions in Eastern Asia
+region_indochina = {
+	graphical_culture = "asian"
+	capital_province = x5C3070
+	map_color = {
+		0.9
+		0.2
+		0.1
+	}
+	states = {
+		STATE_CAMBODIA
+		STATE_MEKONG
+		STATE_TONKIN
+		STATE_ANNAM
+		STATE_LAOS
+	}
+}
+
+region_siam_and_malaya = {
+	graphical_culture = "asian"
+	capital_province = x20DFD0
+	map_color = {
+		0.9
+		0.1
+		0.1
+	}
+	states = {
+		STATE_CHIANG_MAI
+		STATE_NAKHON_RATCHASIMA
+		STATE_MALAYA
+		STATE_TENASSERIM
+		STATE_BANGKOK
+	}
+}
+
+region_indonesia = {
+	graphical_culture = "asian"
+	capital_province = x6ED39E
+	map_color = {
+		0.204
+		0.651
+		0.35
+	}
+	states = {
+		STATE_WEST_JAVA
+		STATE_EAST_JAVA
+		STATE_CENTRAL_JAVA
+	}
+}
+
+region_new_guinea = {
+	graphical_culture = "asian"
+	capital_province = x39DD3B
+	map_color = {
+		0.204
+		0.67
+		0.308
+	}
+	states = {
+		STATE_WESTERN_NEW_GUINEA
+		STATE_EASTERN_NEW_GUINEA
+		STATE_SUNDA_ISLANDS
+		STATE_CELEBES
+		STATE_MOLUCCAS
+	}
+}
+
+region_sumatra = {
+	graphical_culture = "asian"
+	capital_province = x3099D2
+	map_color = {
+		0.385
+		0.651
+		0.308
+	}
+	states = {
+		STATE_NORTH_SUMATRA
+		STATE_SOUTH_SUMATRA
+		STATE_ACEH
+	}
+}
+
+region_borneo = {
+	graphical_culture = "asian"
+	capital_province = xFFE074
+	map_color = {
+		0.344
+		0.651
+		0.308
+	}
+	states = {
+		STATE_WEST_BORNEO
+		STATE_EAST_BORNEO
+		STATE_NORTH_BORNEO
+	}
+}
+
+region_southeast_china = {
+	graphical_culture = "asian"
+	capital_province = x2BDE7B
+	map_color = {
+		0.8
+		0.8
+		0.9
+	}
+	states = {
+		STATE_FUJIAN
+		STATE_FORMOSA
+		STATE_JIANGXI
+	}
+}
+
+region_south_china = {
+	graphical_culture = "asian"
+	capital_province = x85E0D4
+	map_color = {
+		0.8
+		0.89
+		0.9
+	}
+	states = {
+		STATE_SHAOZHOU
+		STATE_GUANGDONG
+		STATE_GUANGXI
+	}
+}
+
+region_north_china = {
+	graphical_culture = "asian"
+	capital_province = x90D001
+	map_color = {
+		218
+		234
+		15
+	}
+	states = {
+		STATE_SHANDONG
+		STATE_BEIJING
+		STATE_ZHILI
+	}
+}
+
+region_manchuria = {
+	graphical_culture = "asian"
+	capital_province = x21D001
+	map_color = {
+		0.7
+		0.7
+		0.3
+	}
+	states = {
+		STATE_SOUTHERN_MANCHURIA
+		STATE_NORTHERN_MANCHURIA
+		STATE_OUTER_MANCHURIA
+		STATE_SHENGJING
+	}
+}
+
+region_japan = {
+	graphical_culture = "asian"
+	capital_province = xB050C0
+	map_color = {
+		0.1
+		0.7
+		0.7
+	}
+	states = {
+		STATE_HOKKAIDO
+		STATE_TOHOKU
+		STATE_KANTO
+		STATE_CHUBU
+		STATE_SAKHALIN
+	}
+}
+
+region_south_japan = {
+	graphical_culture = "asian"
+	capital_province = x8EC4C9
+	map_color = {
+		0.1
+		0.8
+		0.7
+	}
+	states = {
+		STATE_KANSAI
+		STATE_KYUSHU
+		STATE_CHUGOKU
+		STATE_SHIKOKU
+		STATE_RYUKYU_ISLANDS
+	}
+}
+
+region_west_siberia = {
+	capital_province = x0C0895
+	map_color = {
+		0.68
+		1
+		0.32
+	}
+	states = {
+		STATE_URAL
+		STATE_OB
+		STATE_UPPER_YENISEYSK
+		STATE_TOMSK
+		STATE_TOBOLSK
+	}
+}
+
+region_east_siberia = {
+	capital_province = xF9D594
+	map_color = {
+		0.204
+		0.251
+		0.808
+	}
+	states = {
+		STATE_CHUKOTKA
+		STATE_KAMCHATKA
+		STATE_OKHOTSK
+	}
+}
+
+region_baikal_yakutia = {
+	capital_province = x3CCF8D
+	map_color = {
+		0.204
+		0.291
+		0.808
+	}
+	states = {
+		STATE_YAKUTSK
+		STATE_TRANS_BAIKAL
+		STATE_IRKUTSK
+	}
+}
+
+region_oceania = {
+	capital_province = x10DF50
+	map_color = {
+		0.2
+		0.4
+		0.7
+	}
+	states = {
+		STATE_HAWAIIAN_ISLANDS
+		STATE_EAST_MICRONESIA
+		STATE_WEST_MICRONESIA
+		STATE_SOLOMON_ISLANDS
+		STATE_FIJI
+		STATE_VANUATU
+		STATE_KANAK
+		STATE_BOUGAINVILLE
+		STATE_NAURU
+		STATE_TAHITI
+		STATE_TONGA
+	}
+}
+
+region_mongolia = {
+	graphical_culture = "asian"
+	capital_province = x90D001
+	map_color = {
+		1
+		1
+		0
+	}
+	states = {
+		STATE_ULIASTAI
+		STATE_URGA
+		STATE_ALXA
+		STATE_TUVA
+		STATE_HINGGAN
+	}
+}
+
+region_central_china = {
+	graphical_culture = "asian"
+	capital_province = x2BDE7B
+	map_color = {
+		100
+		150
+		20
+	}
+	states = {
+		STATE_HENAN
+		STATE_NORTHERN_ANHUI
+		STATE_EASTERN_HUBEI
+		STATE_WESTERN_HUBEI
+	}
+}
+
+region_central_coast_china = {
+	graphical_culture = "asian"
+	capital_province = xB01101
+	map_color = {
+		100
+		170
+		20
+	}
+	states = {
+		STATE_JIANGSU
+		STATE_SOUTHERN_ANHUI
+		STATE_ZHEJIANG
+		STATE_SUZHOU
+		STATE_NANJING
+	}
+}
+
+region_southwest_china = {
+	graphical_culture = "asian"
+	capital_province = x2BDE7B
+	map_color = {
+		245
+		245
+		220
+	}
+	states = {
+		STATE_GUIZHOU
+		STATE_CHONGQING
+		STATE_SICHUAN
+		STATE_YUNNAN
+		STATE_HUNAN
+	}
+}
+
+region_west_china = {
+	graphical_culture = "asian"
+	capital_province = x2BDE7B
+	map_color = {
+		68
+		144
+		212
+	}
+	states = {
+		STATE_QINGHAI
+		STATE_SHANXI
+		STATE_NINGXIA
+		STATE_GANSU
+		STATE_XIAN
+	}
+}
+
+region_korea = {
+	graphical_culture = "asian"
+	capital_province = x21D001
+	map_color = {
+		157
+		144
+		97
+	}
+	states = {
+		STATE_SEOUL
+		STATE_BUSAN
+		STATE_SARIWON
+		STATE_PYONGYANG
+		STATE_YANGHO
+	}
+}
+
+region_east_australia = {
+	capital_province = x10DF50
+	map_color = {
+		114
+		165
+		203
+	}
+	states = {
+		STATE_NEW_SOUTH_WALES
+		STATE_VICTORIA
+		STATE_QUEENSLAND
+		STATE_TASMANIA
+	}
+}
+
+region_west_australia = {
+	capital_province = x835810
+	map_color = {
+		114
+		185
+		203
+	}
+	states = {
+		STATE_SOUTH_AUSTRALIA
+		STATE_WESTERN_AUSTRALIA
+		STATE_NORTHERN_TERRITORY
+	}
+}
+
+region_new_zeeland = {
+	capital_province = x1000F0
+	map_color = {
+		122
+		165
+		203
+	}
+	states = {
+		STATE_NORTH_ISLAND
+		STATE_SOUTH_ISLAND
+	}
+}
+
+region_phillipines = {
+	graphical_culture = "asian"
+	capital_province = x6ED39E
+	map_color = {
+		119
+		32
+		29
+	}
+	states = {
+		STATE_MINDANAO
+		STATE_LUZON
+		STATE_VISAYAS
+	}
+}
