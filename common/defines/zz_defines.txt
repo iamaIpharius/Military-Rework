@@ -1,0 +1,82 @@
+﻿NAI = {
+	AI_PEACE_AGREEMENT_BASE_VALUE = -100 # Was 0. See ~SHORT_WAR
+	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 25 # Was 10. See ~
+	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION = 4 # For each month the war goes on add this to the acceptance for a white peace
+	AI_PEACE_AGREEMENT_WAR_SUPPORT_FACTOR = -2	# Was -1, war support should be a big factor for AI in negotiated peace.
+	AI_PEACE_AGREEMENT_ALLY_WARGOAL_FACTOR = 25 # Was 10
+	AI_PEACE_AGREEMENT_SELF_WARGOAL_FACTOR = 50 # Was 30, bilateral peace was a cool mechanic, but setting this at 30 basically crippled the idea
+	AI_PEACE_AGREEMENT_ENEMY_WARGOAL_SELF_FACTOR = -50 # Was -50
+	AI_PEACE_AGREEMENT_ENEMY_WARGOAL_ALLY_FACTOR = -25 # Was -10
+	AI_PEACE_AGREEMENT_PEACE_DESIRE_FACTOR = 1.0 # Was 1.0. Not touching this, would be nice if this were dynamic and decreases over time to simulate WW1
+
+	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 12 # Before this amount of months, reduce AI peace desire
+	AI_PEACE_DESIRE_FROM_SHORT_WAR = -100 # Subtract this amount of peace desire for the above number of months (multiplied by AI_MONTHS_OF_REDUCED_PEACE_DESIRE - months of war duration)
+	AI_PEACE_DESIRE_FROM_TURMOIL = 100 # Add this amount of peace desire at 100% radicals
+	AI_PEACE_DESIRE_FROM_DEVASTATION = 50 # Add this amount of peace desire at 100% devastation
+	AI_PEACE_DESIRE_FROM_LOYALISTS = -100 # Subtract this amount of peace desire at 100% loyalists
+	AI_PEACE_DESIRE_FROM_DEBT_LEVEL = 100 # Add this amount of peace desire at 100% debt level
+	AI_PEACE_DESIRE_FROM_BANKRUPTCY = 100 # Add this amount of peace desire when bankrupt
+	AI_PEACE_DESIRE_FROM_GOLD_RESERVES = -25 # Subtract this amount of peace desire at 100% gold reserves
+	AI_PEACE_DESIRE_FROM_FORCE_BALANCE = 25 # Up to this amount is added or subtracted from war support based on DIPLO_PLAY_FORCE_BALANCE_SCALE of the two sides
+}
+
+NGame = {
+	START_DATE = "1836.1.1"
+	END_DATE = "1946.1.1" 
+}
+
+NMilitary = {
+	INITIAL_MANPOWER_COST_MULTIPLIER = 10 			# there is an extra cost for training new recruits, compared to maintenence of said recruits
+	BATTLE_PLAN_ADVANCE_PROGRESS_TO_LAUNCH = 1000 			# required accumulated advance progress to launch
+
+	BATTLE_RAW_MANPOWER_INFLICTED_CASUALTY_RATIO = 0.15		# applied to the number of casualties caused by raw number of troops, ie without considering Offense/Defense - increasing this makes CE less important and battles more lethal
+	BATTLE_COMBAT_EFFICIENCY_INFLICTED_CASUALTY_RATIO = 0.35	# applied to the number of casualties caused by troops with Offense/Defense also factored in - incre
+	BASE_MORALE_RECOVERED_PER_DAY = 0.005			# Default morale recovered is 3% per day
+	BASE_MORALE_LOST_PER_DAY = 0.01					# Default morale lost when out of supply is 5%
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.02 	# The minimum percentage of manpower a unit can lose each week due to attrition
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.06 	# The maximum percentage of manpower a unit can lose each week due to attrition
+
+	BATTLE_BASE_MIN_PROVINCES_TAKEN = 1
+	BATTLE_BASE_MAX_PROVINCES_TAKEN = 3
+	BATTLE_PROVINCES_TAKEN_FRONT_PROVINCES_NUM_DIVISOR = 25		# Attacker takes (num provinces in front) divided by this as extra, clamped to BATTLE_BASE_MIN_PROVINCES_TAKEN and BATTLE_BASE_MAX_PROVINCES_TAKEN
+	BATTLE_PROVINCES_TAKEN_THEATER_PROVINCES_NUM_DIVISOR = 250	# Attacker takes (num provinces in theater) divided by this as extra, clamped to BATTLE_BASE_MIN_PROVINCES_TAKEN and BATTLE_BASE_MAX_PROVINCES_TAKEN
+	BATTLE_PROVINCES_TAKEN_ATTACKING_UNIT_SCALE = 0.02			# Multiply provinces taken by ( 1 + this * number of attacking units left at end of battle)
+	BATTLE_PROVINCES_TAKEN_MAX_DEPTH_MIN = 1					# Maximum distance from battle provinces that provinces can be taken by attacker (minimum)
+	BATTLE_PROVINCES_TAKEN_MAX_DEPTH_MAX = 3					# Maximum distance from battle provinces that provinces can be taken (maximum)
+	BATTLE_PROVINCES_TAKEN_MAX_DEPTH_FRONT_PROVINCES_NUM_DIVISOR = 250	# Num provinces in front is divided by this and added to maximum depth attacker can take provinces at
+	BATTLE_PROVINCES_TAKEN_MAX_DEPTH_THEATER_PROVINCES_NUM_DIVISOR = 2500	# Num provinces in theater is divided by this and added to maximum depth attacker can take provinces at 
+	DEFENSIVE_PROVINCES_RETAKEN_MAX_DEPTH = 1					# Maximum distance from battle provinces that provinces can be retaken in defensive battle
+	BATTLE_PROVINCES_TAKEN_THEATER_UNIT_SCALE = 1				# Scales number of provinces captured by theater-provinces / ( units-in-theater * this-define )
+	BATTLE_PROVINCES_TAKEN_MAX_EXTRA = 1                  		# If the selected provinces will cause split, capture the new theater as long as it has up to BATTLE_PROVINCES_TAKEN_MAX_EXTRA provinces. This might not respect the distance limit (BATTLE_PROVINCES_TAKEN_MAX_DEPTH).
+	BATTLE_PROVINCES_TAKEN_THEATER_MIN_SCALE = 0.01			# Number of provinces captured cannot result in a lower scaling factor than this due to BATTLE_PROVINCES_TAKEN_THEATER_UNIT_SCALE
+	BATTLE_PROVINCES_TAKEN_ABSOLUTE_MIN = 1					# The absolute least number of provinces that can be captured in a successful advance, after all scaling has been applied
+
+	MOBILIZATION_INFRASTRUCTURE_FACTOR = 0.005	# amount of mobilization generated per point of infrastructure. one battalion takes one full point of mobilization to mobilize
+	MIN_MOBILIZATION_PER_DAY = 0.02				# minimum mobilization gained per day by each mobilizing battalion (the last unit to gain mobilization in a state might have to do with whatever is left)
+	MAX_MOBILIZATION_PER_DAY = 0.06				# maximum mobilization gained per day by each mobilizing battalion
+}
+
+NWar = {
+
+	DEVASTATION_INCREASE_RATE = 0.03 # Per day, scales with level of occupation
+	DEVASTATION_DECAY_RATE = -0.03 # Per day, when there are no occupations
+	DEVASTATION_FROM_BATTLES = 0.1 # For each battle
+
+	DAYS_BETWEEN_WAR_EXHAUSTION = 30 # Every this many days war support will be reduced by the war exhaustion formula
+	WAR_EXHAUSTION_BASE = 0.25
+ 	WAR_EXHAUSTION_KIA_FACTOR = 50.0 # Scaled by casualties compared to total manpower
+
+	MAX_SIMULTANEOUS_BATTLES = 1                    # Allows to spawn up to MAX_SIMULTANEOUS_BATTLES as long as you have that many generals with advance orders.
+
+}
+
+#NTechnology = {
+#	TECH_SPREAD_RANDOM_RANGE = 0.25 # How much can distribution of tech spread vary each week
+#	TECH_AHEAD_OF_TIME_PENALTY_FACTOR = 0.50	# For every tech in a previous era not already researched in this category, take this multiple of the cost as an additional penalty (multiplied by number of eras between the techs)
+#}
+
+NDiplomacy = {
+	DIPLOMATIC_PLAY_ESCALATION_DAILY = 0.25
+	DIPLOMATIC_PLAY_ESCALATION_PAUSE_FROM_ACTION = 30 # Number of days that escalation pauses when either side takes an action
+	DIPLOMATIC_PLAY_ESCALATION_PAUSE_MAX = 120 # Escalation pause can't be longer than this no matter how many actions are taken at once
+}
