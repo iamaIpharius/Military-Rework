@@ -1,0 +1,15 @@
+﻿building_forts = {
+	building_group = bg_conscription
+	texture = "gfx/interface/icons/building_icons/building_forts.dds"
+	city_type = city
+	has_max_level = yes
+	levels_per_mesh = 25
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	production_method_groups = {
+		pmg_fortification
+		pmg_fort_artillery
+	}
+	required_construction = construction_cost_high
+}

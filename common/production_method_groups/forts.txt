@@ -1,0 +1,21 @@
+﻿#### forts have three production method groups; fortification, artillery, and plain medic thingy not different from barracks
+
+pmg_fortification = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_star_fort
+		pm_underground_facility
+		pm_concrete_roof
+	}
+}
+
+pmg_fort_artillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_mounted_artillery
+		pm_barbette_artillery
+		pm_gun_turret
+	}
+}

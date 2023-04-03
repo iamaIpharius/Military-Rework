@@ -9,7 +9,11 @@ state_building_arty_max_level_add = {
 	percent = no
 	num_decimals = 0
 }
-
+state_building_forts_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
 character_command_limit_combat_unit_cav_add = {
 	good = yes
 	percent = no

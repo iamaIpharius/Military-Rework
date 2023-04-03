@@ -11,6 +11,7 @@
 		state_building_cav_max_level_add = 25
 		state_building_arty_max_level_add = 25
 		state_building_conscription_center_max_level_add = 25
+		state_building_forts_max_level_add = 5
 	}
 	on_enact = {
 		custom_tooltip = QUALIFICATIONS_OFFICERS_PEASANT_LEVIES_DESC
@@ -54,6 +55,7 @@ law_professional_army = {
 		state_building_cav_max_level_add = 100
 		state_building_arty_max_level_add = 100
 		state_building_conscription_center_max_level_add = 50
+		state_building_forts_max_level_add = 10
 	}
 	possible_political_movements = {
 		law_mass_conscription
@@ -98,6 +100,7 @@ law_national_militia = {
 		state_building_cav_max_level_add = 30
 		state_building_arty_max_level_add = 30
 		state_building_conscription_center_max_level_add = 100
+		state_building_forts_max_level_add = 10
 	}
 	possible_political_movements = {
 		law_professional_army
@@ -139,6 +142,7 @@ law_mass_conscription = {
 		state_building_cav_max_level_add = 100
 		state_building_arty_max_level_add = 100
 		state_building_conscription_center_max_level_add = 100
+		state_building_forts_max_level_add = 10
 	}
 	possible_political_movements = {
 		law_mass_conscription
