@@ -137,3 +137,8 @@ modifier_state_building_forts_max_level_add_desc:0 "A bonus or penalty to the ma
  pm_mounted_artillery:0 "Mounted Artillery"
  pm_barbette_artillery:0 "Barbette Artillery"
  pm_gun_turret:0 "Gun Turret"
+
+westernized_army:0 "Westernised Army"
+non_westernized_army:0 "Non-westernized Army"
+western_army:0 "Westernised Army"
+western_army_desc:0 "Army of the New Era!"

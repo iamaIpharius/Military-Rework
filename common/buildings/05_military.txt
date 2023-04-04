@@ -78,8 +78,8 @@ building_conscription_center = {
 	recruits_combat_unit = combat_unit_conscript
 	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
 	production_method_groups = {
-		pmg_type_cons
-		pmg_main_force_cons
+		pmg_type
+		pmg_main_force
 		pmg_support
 		pmg_recon
 		pmg_weapon

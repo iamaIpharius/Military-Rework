@@ -1,0 +1,2552 @@
+﻿### Calculate & apply overstacking debuffs
+#   Root = attacker or defender country
+#   scope:battle = battle
+#   scope:attacker = attacking commander
+#   scope:defender = defending commander
+#   scope:state = location state
+on_battle_started = {
+	effect = {
+		scope:attacker = {
+			if = {
+				limit = {
+					# on_battle_ended fires once for each country {twice total} for some reason; need to guard against it
+					NOR = {
+						has_modifier = mr_advance_pm_inf_pm_inf
+						has_modifier = mr_advance_pm_inf_pm_cav
+						has_modifier = mr_advance_pm_inf_pm_arty
+						has_modifier = mr_advance_pm_inf_pm_non_west
+						has_modifier = mr_advance_pm_cav_pm_inf
+						has_modifier = mr_advance_pm_cav_pm_cav
+						has_modifier = mr_advance_pm_cav_pm_arty
+						has_modifier = mr_advance_pm_cav_pm_non_west
+						has_modifier = mr_advance_pm_arty_pm_inf
+						has_modifier = mr_advance_pm_arty_pm_cav
+						has_modifier = mr_advance_pm_arty_pm_arty
+						has_modifier = mr_advance_pm_arty_pm_non_west
+						has_modifier = mr_advance_pm_non_west_pm_inf
+						has_modifier = mr_advance_pm_non_west_pm_cav
+						has_modifier = mr_advance_pm_non_west_pm_arty
+						has_modifier = mr_advance_pm_non_west_pm_non_west
+						has_modifier = mr_raid_order_pm_inf_pm_inf
+						has_modifier = mr_raid_order_pm_inf_pm_cav
+						has_modifier = mr_raid_order_pm_inf_pm_arty
+						has_modifier = mr_raid_order_pm_inf_pm_non_west
+						has_modifier = mr_raid_order_pm_cav_pm_inf
+						has_modifier = mr_raid_order_pm_cav_pm_cav
+						has_modifier = mr_raid_order_pm_cav_pm_arty
+						has_modifier = mr_raid_order_pm_cav_pm_non_west
+						has_modifier = mr_raid_order_pm_arty_pm_inf
+						has_modifier = mr_raid_order_pm_arty_pm_cav
+						has_modifier = mr_raid_order_pm_arty_pm_arty
+						has_modifier = mr_raid_order_pm_arty_pm_non_west
+						has_modifier = mr_raid_order_pm_non_west_pm_inf
+						has_modifier = mr_raid_order_pm_non_west_pm_cav
+						has_modifier = mr_raid_order_pm_non_west_pm_arty
+						has_modifier = mr_raid_order_pm_non_west_pm_non_west
+						has_modifier = mr_siege_order_pm_inf_pm_inf
+						has_modifier = mr_siege_order_pm_inf_pm_cav
+						has_modifier = mr_siege_order_pm_inf_pm_arty
+						has_modifier = mr_siege_order_pm_inf_pm_non_west
+						has_modifier = mr_siege_order_pm_cav_pm_inf
+						has_modifier = mr_siege_order_pm_cav_pm_cav
+						has_modifier = mr_siege_order_pm_cav_pm_arty
+						has_modifier = mr_siege_order_pm_cav_pm_non_west
+						has_modifier = mr_siege_order_pm_arty_pm_inf
+						has_modifier = mr_siege_order_pm_arty_pm_cav
+						has_modifier = mr_siege_order_pm_arty_pm_arty
+						has_modifier = mr_siege_order_pm_arty_pm_non_west
+						has_modifier = mr_siege_order_pm_non_west_pm_inf
+						has_modifier = mr_siege_order_pm_non_west_pm_cav
+						has_modifier = mr_siege_order_pm_non_west_pm_arty
+						has_modifier = mr_siege_order_pm_non_west_pm_non_west
+						has_modifier = mr_defend_pm_inf_pm_inf
+						has_modifier = mr_defend_pm_inf_pm_cav
+						has_modifier = mr_defend_pm_inf_pm_arty
+						has_modifier = mr_defend_pm_inf_pm_non_west
+						has_modifier = mr_defend_pm_cav_pm_inf
+						has_modifier = mr_defend_pm_cav_pm_cav
+						has_modifier = mr_defend_pm_cav_pm_arty
+						has_modifier = mr_defend_pm_cav_pm_non_west
+						has_modifier = mr_defend_pm_arty_pm_inf
+						has_modifier = mr_defend_pm_arty_pm_cav
+						has_modifier = mr_defend_pm_arty_pm_arty
+						has_modifier = mr_defend_pm_arty_pm_non_west
+						has_modifier = mr_defend_pm_non_west_pm_inf
+						has_modifier = mr_defend_pm_non_west_pm_cav
+						has_modifier = mr_defend_pm_non_west_pm_arty
+						has_modifier = mr_defend_pm_non_west_pm_non_west
+						has_modifier = mr_delay_order_pm_inf_pm_inf
+						has_modifier = mr_delay_order_pm_inf_pm_cav
+						has_modifier = mr_delay_order_pm_inf_pm_arty
+						has_modifier = mr_delay_order_pm_inf_pm_non_west
+						has_modifier = mr_delay_order_pm_cav_pm_inf
+						has_modifier = mr_delay_order_pm_cav_pm_cav
+						has_modifier = mr_delay_order_pm_cav_pm_arty
+						has_modifier = mr_delay_order_pm_cav_pm_non_west
+						has_modifier = mr_delay_order_pm_arty_pm_inf
+						has_modifier = mr_delay_order_pm_arty_pm_cav
+						has_modifier = mr_delay_order_pm_arty_pm_arty
+						has_modifier = mr_delay_order_pm_arty_pm_non_west
+						has_modifier = mr_delay_order_pm_non_west_pm_inf
+						has_modifier = mr_delay_order_pm_non_west_pm_cav
+						has_modifier = mr_delay_order_pm_non_west_pm_arty
+						has_modifier = mr_delay_order_pm_non_west_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_inf_pm_inf
+						has_modifier = mr_strongpoint_order_pm_inf_pm_cav
+						has_modifier = mr_strongpoint_order_pm_inf_pm_arty
+						has_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_cav_pm_inf
+						has_modifier = mr_strongpoint_order_pm_cav_pm_cav
+						has_modifier = mr_strongpoint_order_pm_cav_pm_arty
+						has_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_arty_pm_inf
+						has_modifier = mr_strongpoint_order_pm_arty_pm_cav
+						has_modifier = mr_strongpoint_order_pm_arty_pm_arty
+						has_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+					}
+				}
+				if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = advance
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_advance_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = raid_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_raid_order_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = siege_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:defender.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_siege_order_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+			}
+		}
+		scope:defender = {
+			if = {
+				limit = {
+					NOR = {
+						has_modifier = mr_advance_pm_inf_pm_inf
+						has_modifier = mr_advance_pm_inf_pm_cav
+						has_modifier = mr_advance_pm_inf_pm_arty
+						has_modifier = mr_advance_pm_inf_pm_non_west
+						has_modifier = mr_advance_pm_cav_pm_inf
+						has_modifier = mr_advance_pm_cav_pm_cav
+						has_modifier = mr_advance_pm_cav_pm_arty
+						has_modifier = mr_advance_pm_cav_pm_non_west
+						has_modifier = mr_advance_pm_arty_pm_inf
+						has_modifier = mr_advance_pm_arty_pm_cav
+						has_modifier = mr_advance_pm_arty_pm_arty
+						has_modifier = mr_advance_pm_arty_pm_non_west
+						has_modifier = mr_advance_pm_non_west_pm_inf
+						has_modifier = mr_advance_pm_non_west_pm_cav
+						has_modifier = mr_advance_pm_non_west_pm_arty
+						has_modifier = mr_advance_pm_non_west_pm_non_west
+						has_modifier = mr_raid_order_pm_inf_pm_inf
+						has_modifier = mr_raid_order_pm_inf_pm_cav
+						has_modifier = mr_raid_order_pm_inf_pm_arty
+						has_modifier = mr_raid_order_pm_inf_pm_non_west
+						has_modifier = mr_raid_order_pm_cav_pm_inf
+						has_modifier = mr_raid_order_pm_cav_pm_cav
+						has_modifier = mr_raid_order_pm_cav_pm_arty
+						has_modifier = mr_raid_order_pm_cav_pm_non_west
+						has_modifier = mr_raid_order_pm_arty_pm_inf
+						has_modifier = mr_raid_order_pm_arty_pm_cav
+						has_modifier = mr_raid_order_pm_arty_pm_arty
+						has_modifier = mr_raid_order_pm_arty_pm_non_west
+						has_modifier = mr_raid_order_pm_non_west_pm_inf
+						has_modifier = mr_raid_order_pm_non_west_pm_cav
+						has_modifier = mr_raid_order_pm_non_west_pm_arty
+						has_modifier = mr_raid_order_pm_non_west_pm_non_west
+						has_modifier = mr_siege_order_pm_inf_pm_inf
+						has_modifier = mr_siege_order_pm_inf_pm_cav
+						has_modifier = mr_siege_order_pm_inf_pm_arty
+						has_modifier = mr_siege_order_pm_inf_pm_non_west
+						has_modifier = mr_siege_order_pm_cav_pm_inf
+						has_modifier = mr_siege_order_pm_cav_pm_cav
+						has_modifier = mr_siege_order_pm_cav_pm_arty
+						has_modifier = mr_siege_order_pm_cav_pm_non_west
+						has_modifier = mr_siege_order_pm_arty_pm_inf
+						has_modifier = mr_siege_order_pm_arty_pm_cav
+						has_modifier = mr_siege_order_pm_arty_pm_arty
+						has_modifier = mr_siege_order_pm_arty_pm_non_west
+						has_modifier = mr_siege_order_pm_non_west_pm_inf
+						has_modifier = mr_siege_order_pm_non_west_pm_cav
+						has_modifier = mr_siege_order_pm_non_west_pm_arty
+						has_modifier = mr_siege_order_pm_non_west_pm_non_west
+						has_modifier = mr_defend_pm_inf_pm_inf
+						has_modifier = mr_defend_pm_inf_pm_cav
+						has_modifier = mr_defend_pm_inf_pm_arty
+						has_modifier = mr_defend_pm_inf_pm_non_west
+						has_modifier = mr_defend_pm_cav_pm_inf
+						has_modifier = mr_defend_pm_cav_pm_cav
+						has_modifier = mr_defend_pm_cav_pm_arty
+						has_modifier = mr_defend_pm_cav_pm_non_west
+						has_modifier = mr_defend_pm_arty_pm_inf
+						has_modifier = mr_defend_pm_arty_pm_cav
+						has_modifier = mr_defend_pm_arty_pm_arty
+						has_modifier = mr_defend_pm_arty_pm_non_west
+						has_modifier = mr_defend_pm_non_west_pm_inf
+						has_modifier = mr_defend_pm_non_west_pm_cav
+						has_modifier = mr_defend_pm_non_west_pm_arty
+						has_modifier = mr_defend_pm_non_west_pm_non_west
+						has_modifier = mr_delay_order_pm_inf_pm_inf
+						has_modifier = mr_delay_order_pm_inf_pm_cav
+						has_modifier = mr_delay_order_pm_inf_pm_arty
+						has_modifier = mr_delay_order_pm_inf_pm_non_west
+						has_modifier = mr_delay_order_pm_cav_pm_inf
+						has_modifier = mr_delay_order_pm_cav_pm_cav
+						has_modifier = mr_delay_order_pm_cav_pm_arty
+						has_modifier = mr_delay_order_pm_cav_pm_non_west
+						has_modifier = mr_delay_order_pm_arty_pm_inf
+						has_modifier = mr_delay_order_pm_arty_pm_cav
+						has_modifier = mr_delay_order_pm_arty_pm_arty
+						has_modifier = mr_delay_order_pm_arty_pm_non_west
+						has_modifier = mr_delay_order_pm_non_west_pm_inf
+						has_modifier = mr_delay_order_pm_non_west_pm_cav
+						has_modifier = mr_delay_order_pm_non_west_pm_arty
+						has_modifier = mr_delay_order_pm_non_west_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_inf_pm_inf
+						has_modifier = mr_strongpoint_order_pm_inf_pm_cav
+						has_modifier = mr_strongpoint_order_pm_inf_pm_arty
+						has_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_cav_pm_inf
+						has_modifier = mr_strongpoint_order_pm_cav_pm_cav
+						has_modifier = mr_strongpoint_order_pm_cav_pm_arty
+						has_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_arty_pm_inf
+						has_modifier = mr_strongpoint_order_pm_arty_pm_cav
+						has_modifier = mr_strongpoint_order_pm_arty_pm_arty
+						has_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+					}
+				}
+				if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = defend
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_defend_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = delay_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_delay_order_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_inf_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_inf_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_inf_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_inf_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_cav_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_cav_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_cav_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_cav_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_arty_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_arty_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_arty_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_arty_pm_non_west
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_inf
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_non_west_pm_inf
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_cav
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_non_west_pm_cav
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_arty
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_non_west_pm_arty
+						months = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_commander_order = strongpoint_order
+						commander_pm_usage = {
+							target = owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						commander_pm_usage = {
+							target = scope:attacker.owner
+							production_method = pm_non_west
+							value > 0.4
+						}
+						# Why do I need to specify the scope here explicity? idfk
+					}
+					add_modifier = {
+						name = mr_strongpoint_order_pm_non_west_pm_non_west
+						months = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+### Remove overstacking debuffs on battle end
+#   Root = attacker or defender country
+#   scope:battle = battle
+#   scope:attacker = attacking commander
+#   scope:defender = defending commander
+#   scope:state = location state
+on_battle_ended = {
+	effect = {
+		scope:attacker = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = mr_advance_pm_inf_pm_inf
+						has_modifier = mr_advance_pm_inf_pm_cav
+						has_modifier = mr_advance_pm_inf_pm_arty
+						has_modifier = mr_advance_pm_inf_pm_non_west
+						has_modifier = mr_advance_pm_cav_pm_inf
+						has_modifier = mr_advance_pm_cav_pm_cav
+						has_modifier = mr_advance_pm_cav_pm_arty
+						has_modifier = mr_advance_pm_cav_pm_non_west
+						has_modifier = mr_advance_pm_arty_pm_inf
+						has_modifier = mr_advance_pm_arty_pm_cav
+						has_modifier = mr_advance_pm_arty_pm_arty
+						has_modifier = mr_advance_pm_arty_pm_non_west
+						has_modifier = mr_advance_pm_non_west_pm_inf
+						has_modifier = mr_advance_pm_non_west_pm_cav
+						has_modifier = mr_advance_pm_non_west_pm_arty
+						has_modifier = mr_advance_pm_non_west_pm_non_west
+						has_modifier = mr_raid_order_pm_inf_pm_inf
+						has_modifier = mr_raid_order_pm_inf_pm_cav
+						has_modifier = mr_raid_order_pm_inf_pm_arty
+						has_modifier = mr_raid_order_pm_inf_pm_non_west
+						has_modifier = mr_raid_order_pm_cav_pm_inf
+						has_modifier = mr_raid_order_pm_cav_pm_cav
+						has_modifier = mr_raid_order_pm_cav_pm_arty
+						has_modifier = mr_raid_order_pm_cav_pm_non_west
+						has_modifier = mr_raid_order_pm_arty_pm_inf
+						has_modifier = mr_raid_order_pm_arty_pm_cav
+						has_modifier = mr_raid_order_pm_arty_pm_arty
+						has_modifier = mr_raid_order_pm_arty_pm_non_west
+						has_modifier = mr_raid_order_pm_non_west_pm_inf
+						has_modifier = mr_raid_order_pm_non_west_pm_cav
+						has_modifier = mr_raid_order_pm_non_west_pm_arty
+						has_modifier = mr_raid_order_pm_non_west_pm_non_west
+						has_modifier = mr_siege_order_pm_inf_pm_inf
+						has_modifier = mr_siege_order_pm_inf_pm_cav
+						has_modifier = mr_siege_order_pm_inf_pm_arty
+						has_modifier = mr_siege_order_pm_inf_pm_non_west
+						has_modifier = mr_siege_order_pm_cav_pm_inf
+						has_modifier = mr_siege_order_pm_cav_pm_cav
+						has_modifier = mr_siege_order_pm_cav_pm_arty
+						has_modifier = mr_siege_order_pm_cav_pm_non_west
+						has_modifier = mr_siege_order_pm_arty_pm_inf
+						has_modifier = mr_siege_order_pm_arty_pm_cav
+						has_modifier = mr_siege_order_pm_arty_pm_arty
+						has_modifier = mr_siege_order_pm_arty_pm_non_west
+						has_modifier = mr_siege_order_pm_non_west_pm_inf
+						has_modifier = mr_siege_order_pm_non_west_pm_cav
+						has_modifier = mr_siege_order_pm_non_west_pm_arty
+						has_modifier = mr_siege_order_pm_non_west_pm_non_west
+						has_modifier = mr_defend_pm_inf_pm_inf
+						has_modifier = mr_defend_pm_inf_pm_cav
+						has_modifier = mr_defend_pm_inf_pm_arty
+						has_modifier = mr_defend_pm_inf_pm_non_west
+						has_modifier = mr_defend_pm_cav_pm_inf
+						has_modifier = mr_defend_pm_cav_pm_cav
+						has_modifier = mr_defend_pm_cav_pm_arty
+						has_modifier = mr_defend_pm_cav_pm_non_west
+						has_modifier = mr_defend_pm_arty_pm_inf
+						has_modifier = mr_defend_pm_arty_pm_cav
+						has_modifier = mr_defend_pm_arty_pm_arty
+						has_modifier = mr_defend_pm_arty_pm_non_west
+						has_modifier = mr_defend_pm_non_west_pm_inf
+						has_modifier = mr_defend_pm_non_west_pm_cav
+						has_modifier = mr_defend_pm_non_west_pm_arty
+						has_modifier = mr_defend_pm_non_west_pm_non_west
+						has_modifier = mr_delay_order_pm_inf_pm_inf
+						has_modifier = mr_delay_order_pm_inf_pm_cav
+						has_modifier = mr_delay_order_pm_inf_pm_arty
+						has_modifier = mr_delay_order_pm_inf_pm_non_west
+						has_modifier = mr_delay_order_pm_cav_pm_inf
+						has_modifier = mr_delay_order_pm_cav_pm_cav
+						has_modifier = mr_delay_order_pm_cav_pm_arty
+						has_modifier = mr_delay_order_pm_cav_pm_non_west
+						has_modifier = mr_delay_order_pm_arty_pm_inf
+						has_modifier = mr_delay_order_pm_arty_pm_cav
+						has_modifier = mr_delay_order_pm_arty_pm_arty
+						has_modifier = mr_delay_order_pm_arty_pm_non_west
+						has_modifier = mr_delay_order_pm_non_west_pm_inf
+						has_modifier = mr_delay_order_pm_non_west_pm_cav
+						has_modifier = mr_delay_order_pm_non_west_pm_arty
+						has_modifier = mr_delay_order_pm_non_west_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_inf_pm_inf
+						has_modifier = mr_strongpoint_order_pm_inf_pm_cav
+						has_modifier = mr_strongpoint_order_pm_inf_pm_arty
+						has_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_cav_pm_inf
+						has_modifier = mr_strongpoint_order_pm_cav_pm_cav
+						has_modifier = mr_strongpoint_order_pm_cav_pm_arty
+						has_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_arty_pm_inf
+						has_modifier = mr_strongpoint_order_pm_arty_pm_cav
+						has_modifier = mr_strongpoint_order_pm_arty_pm_arty
+						has_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+					}
+					
+				}
+				remove_modifier = mr_advance_pm_inf_pm_inf
+				remove_modifier = mr_advance_pm_inf_pm_cav
+				remove_modifier = mr_advance_pm_inf_pm_arty
+				remove_modifier = mr_advance_pm_inf_pm_non_west
+				remove_modifier = mr_advance_pm_cav_pm_inf
+				remove_modifier = mr_advance_pm_cav_pm_cav
+				remove_modifier = mr_advance_pm_cav_pm_arty
+				remove_modifier = mr_advance_pm_cav_pm_non_west
+				remove_modifier = mr_advance_pm_arty_pm_inf
+				remove_modifier = mr_advance_pm_arty_pm_cav
+				remove_modifier = mr_advance_pm_arty_pm_arty
+				remove_modifier = mr_advance_pm_arty_pm_non_west
+				remove_modifier = mr_advance_pm_non_west_pm_inf
+				remove_modifier = mr_advance_pm_non_west_pm_cav
+				remove_modifier = mr_advance_pm_non_west_pm_arty
+				remove_modifier = mr_advance_pm_non_west_pm_non_west
+				remove_modifier = mr_raid_order_pm_inf_pm_inf
+				remove_modifier = mr_raid_order_pm_inf_pm_cav
+				remove_modifier = mr_raid_order_pm_inf_pm_arty
+				remove_modifier = mr_raid_order_pm_inf_pm_non_west
+				remove_modifier = mr_raid_order_pm_cav_pm_inf
+				remove_modifier = mr_raid_order_pm_cav_pm_cav
+				remove_modifier = mr_raid_order_pm_cav_pm_arty
+				remove_modifier = mr_raid_order_pm_cav_pm_non_west
+				remove_modifier = mr_raid_order_pm_arty_pm_inf
+				remove_modifier = mr_raid_order_pm_arty_pm_cav
+				remove_modifier = mr_raid_order_pm_arty_pm_arty
+				remove_modifier = mr_raid_order_pm_arty_pm_non_west
+				remove_modifier = mr_raid_order_pm_non_west_pm_inf
+				remove_modifier = mr_raid_order_pm_non_west_pm_cav
+				remove_modifier = mr_raid_order_pm_non_west_pm_arty
+				remove_modifier = mr_raid_order_pm_non_west_pm_non_west
+				remove_modifier = mr_siege_order_pm_inf_pm_inf
+				remove_modifier = mr_siege_order_pm_inf_pm_cav
+				remove_modifier = mr_siege_order_pm_inf_pm_arty
+				remove_modifier = mr_siege_order_pm_inf_pm_non_west
+				remove_modifier = mr_siege_order_pm_cav_pm_inf
+				remove_modifier = mr_siege_order_pm_cav_pm_cav
+				remove_modifier = mr_siege_order_pm_cav_pm_arty
+				remove_modifier = mr_siege_order_pm_cav_pm_non_west
+				remove_modifier = mr_siege_order_pm_arty_pm_inf
+				remove_modifier = mr_siege_order_pm_arty_pm_cav
+				remove_modifier = mr_siege_order_pm_arty_pm_arty
+				remove_modifier = mr_siege_order_pm_arty_pm_non_west
+				remove_modifier = mr_siege_order_pm_non_west_pm_inf
+				remove_modifier = mr_siege_order_pm_non_west_pm_cav
+				remove_modifier = mr_siege_order_pm_non_west_pm_arty
+				remove_modifier = mr_siege_order_pm_non_west_pm_non_west
+				remove_modifier = mr_defend_pm_inf_pm_inf
+				remove_modifier = mr_defend_pm_inf_pm_cav
+				remove_modifier = mr_defend_pm_inf_pm_arty
+				remove_modifier = mr_defend_pm_inf_pm_non_west
+				remove_modifier = mr_defend_pm_cav_pm_inf
+				remove_modifier = mr_defend_pm_cav_pm_cav
+				remove_modifier = mr_defend_pm_cav_pm_arty
+				remove_modifier = mr_defend_pm_cav_pm_non_west
+				remove_modifier = mr_defend_pm_arty_pm_inf
+				remove_modifier = mr_defend_pm_arty_pm_cav
+				remove_modifier = mr_defend_pm_arty_pm_arty
+				remove_modifier = mr_defend_pm_arty_pm_non_west
+				remove_modifier = mr_defend_pm_non_west_pm_inf
+				remove_modifier = mr_defend_pm_non_west_pm_cav
+				remove_modifier = mr_defend_pm_non_west_pm_arty
+				remove_modifier = mr_defend_pm_non_west_pm_non_west
+				remove_modifier = mr_delay_order_pm_inf_pm_inf
+				remove_modifier = mr_delay_order_pm_inf_pm_cav
+				remove_modifier = mr_delay_order_pm_inf_pm_arty
+				remove_modifier = mr_delay_order_pm_inf_pm_non_west
+				remove_modifier = mr_delay_order_pm_cav_pm_inf
+				remove_modifier = mr_delay_order_pm_cav_pm_cav
+				remove_modifier = mr_delay_order_pm_cav_pm_arty
+				remove_modifier = mr_delay_order_pm_cav_pm_non_west
+				remove_modifier = mr_delay_order_pm_arty_pm_inf
+				remove_modifier = mr_delay_order_pm_arty_pm_cav
+				remove_modifier = mr_delay_order_pm_arty_pm_arty
+				remove_modifier = mr_delay_order_pm_arty_pm_non_west
+				remove_modifier = mr_delay_order_pm_non_west_pm_inf
+				remove_modifier = mr_delay_order_pm_non_west_pm_cav
+				remove_modifier = mr_delay_order_pm_non_west_pm_arty
+				remove_modifier = mr_delay_order_pm_non_west_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+			}
+		}
+		scope:defender = {
+			if = {
+				limit = {
+					OR = {
+						has_modifier = mr_advance_pm_inf_pm_inf
+						has_modifier = mr_advance_pm_inf_pm_cav
+						has_modifier = mr_advance_pm_inf_pm_arty
+						has_modifier = mr_advance_pm_inf_pm_non_west
+						has_modifier = mr_advance_pm_cav_pm_inf
+						has_modifier = mr_advance_pm_cav_pm_cav
+						has_modifier = mr_advance_pm_cav_pm_arty
+						has_modifier = mr_advance_pm_cav_pm_non_west
+						has_modifier = mr_advance_pm_arty_pm_inf
+						has_modifier = mr_advance_pm_arty_pm_cav
+						has_modifier = mr_advance_pm_arty_pm_arty
+						has_modifier = mr_advance_pm_arty_pm_non_west
+						has_modifier = mr_advance_pm_non_west_pm_inf
+						has_modifier = mr_advance_pm_non_west_pm_cav
+						has_modifier = mr_advance_pm_non_west_pm_arty
+						has_modifier = mr_advance_pm_non_west_pm_non_west
+						has_modifier = mr_raid_order_pm_inf_pm_inf
+						has_modifier = mr_raid_order_pm_inf_pm_cav
+						has_modifier = mr_raid_order_pm_inf_pm_arty
+						has_modifier = mr_raid_order_pm_inf_pm_non_west
+						has_modifier = mr_raid_order_pm_cav_pm_inf
+						has_modifier = mr_raid_order_pm_cav_pm_cav
+						has_modifier = mr_raid_order_pm_cav_pm_arty
+						has_modifier = mr_raid_order_pm_cav_pm_non_west
+						has_modifier = mr_raid_order_pm_arty_pm_inf
+						has_modifier = mr_raid_order_pm_arty_pm_cav
+						has_modifier = mr_raid_order_pm_arty_pm_arty
+						has_modifier = mr_raid_order_pm_arty_pm_non_west
+						has_modifier = mr_raid_order_pm_non_west_pm_inf
+						has_modifier = mr_raid_order_pm_non_west_pm_cav
+						has_modifier = mr_raid_order_pm_non_west_pm_arty
+						has_modifier = mr_raid_order_pm_non_west_pm_non_west
+						has_modifier = mr_siege_order_pm_inf_pm_inf
+						has_modifier = mr_siege_order_pm_inf_pm_cav
+						has_modifier = mr_siege_order_pm_inf_pm_arty
+						has_modifier = mr_siege_order_pm_inf_pm_non_west
+						has_modifier = mr_siege_order_pm_cav_pm_inf
+						has_modifier = mr_siege_order_pm_cav_pm_cav
+						has_modifier = mr_siege_order_pm_cav_pm_arty
+						has_modifier = mr_siege_order_pm_cav_pm_non_west
+						has_modifier = mr_siege_order_pm_arty_pm_inf
+						has_modifier = mr_siege_order_pm_arty_pm_cav
+						has_modifier = mr_siege_order_pm_arty_pm_arty
+						has_modifier = mr_siege_order_pm_arty_pm_non_west
+						has_modifier = mr_siege_order_pm_non_west_pm_inf
+						has_modifier = mr_siege_order_pm_non_west_pm_cav
+						has_modifier = mr_siege_order_pm_non_west_pm_arty
+						has_modifier = mr_siege_order_pm_non_west_pm_non_west
+						has_modifier = mr_defend_pm_inf_pm_inf
+						has_modifier = mr_defend_pm_inf_pm_cav
+						has_modifier = mr_defend_pm_inf_pm_arty
+						has_modifier = mr_defend_pm_inf_pm_non_west
+						has_modifier = mr_defend_pm_cav_pm_inf
+						has_modifier = mr_defend_pm_cav_pm_cav
+						has_modifier = mr_defend_pm_cav_pm_arty
+						has_modifier = mr_defend_pm_cav_pm_non_west
+						has_modifier = mr_defend_pm_arty_pm_inf
+						has_modifier = mr_defend_pm_arty_pm_cav
+						has_modifier = mr_defend_pm_arty_pm_arty
+						has_modifier = mr_defend_pm_arty_pm_non_west
+						has_modifier = mr_defend_pm_non_west_pm_inf
+						has_modifier = mr_defend_pm_non_west_pm_cav
+						has_modifier = mr_defend_pm_non_west_pm_arty
+						has_modifier = mr_defend_pm_non_west_pm_non_west
+						has_modifier = mr_delay_order_pm_inf_pm_inf
+						has_modifier = mr_delay_order_pm_inf_pm_cav
+						has_modifier = mr_delay_order_pm_inf_pm_arty
+						has_modifier = mr_delay_order_pm_inf_pm_non_west
+						has_modifier = mr_delay_order_pm_cav_pm_inf
+						has_modifier = mr_delay_order_pm_cav_pm_cav
+						has_modifier = mr_delay_order_pm_cav_pm_arty
+						has_modifier = mr_delay_order_pm_cav_pm_non_west
+						has_modifier = mr_delay_order_pm_arty_pm_inf
+						has_modifier = mr_delay_order_pm_arty_pm_cav
+						has_modifier = mr_delay_order_pm_arty_pm_arty
+						has_modifier = mr_delay_order_pm_arty_pm_non_west
+						has_modifier = mr_delay_order_pm_non_west_pm_inf
+						has_modifier = mr_delay_order_pm_non_west_pm_cav
+						has_modifier = mr_delay_order_pm_non_west_pm_arty
+						has_modifier = mr_delay_order_pm_non_west_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_inf_pm_inf
+						has_modifier = mr_strongpoint_order_pm_inf_pm_cav
+						has_modifier = mr_strongpoint_order_pm_inf_pm_arty
+						has_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_cav_pm_inf
+						has_modifier = mr_strongpoint_order_pm_cav_pm_cav
+						has_modifier = mr_strongpoint_order_pm_cav_pm_arty
+						has_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_arty_pm_inf
+						has_modifier = mr_strongpoint_order_pm_arty_pm_cav
+						has_modifier = mr_strongpoint_order_pm_arty_pm_arty
+						has_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+					}
+					
+				}
+				remove_modifier = mr_advance_pm_inf_pm_inf
+				remove_modifier = mr_advance_pm_inf_pm_cav
+				remove_modifier = mr_advance_pm_inf_pm_arty
+				remove_modifier = mr_advance_pm_inf_pm_non_west
+				remove_modifier = mr_advance_pm_cav_pm_inf
+				remove_modifier = mr_advance_pm_cav_pm_cav
+				remove_modifier = mr_advance_pm_cav_pm_arty
+				remove_modifier = mr_advance_pm_cav_pm_non_west
+				remove_modifier = mr_advance_pm_arty_pm_inf
+				remove_modifier = mr_advance_pm_arty_pm_cav
+				remove_modifier = mr_advance_pm_arty_pm_arty
+				remove_modifier = mr_advance_pm_arty_pm_non_west
+				remove_modifier = mr_advance_pm_non_west_pm_inf
+				remove_modifier = mr_advance_pm_non_west_pm_cav
+				remove_modifier = mr_advance_pm_non_west_pm_arty
+				remove_modifier = mr_advance_pm_non_west_pm_non_west
+				remove_modifier = mr_raid_order_pm_inf_pm_inf
+				remove_modifier = mr_raid_order_pm_inf_pm_cav
+				remove_modifier = mr_raid_order_pm_inf_pm_arty
+				remove_modifier = mr_raid_order_pm_inf_pm_non_west
+				remove_modifier = mr_raid_order_pm_cav_pm_inf
+				remove_modifier = mr_raid_order_pm_cav_pm_cav
+				remove_modifier = mr_raid_order_pm_cav_pm_arty
+				remove_modifier = mr_raid_order_pm_cav_pm_non_west
+				remove_modifier = mr_raid_order_pm_arty_pm_inf
+				remove_modifier = mr_raid_order_pm_arty_pm_cav
+				remove_modifier = mr_raid_order_pm_arty_pm_arty
+				remove_modifier = mr_raid_order_pm_arty_pm_non_west
+				remove_modifier = mr_raid_order_pm_non_west_pm_inf
+				remove_modifier = mr_raid_order_pm_non_west_pm_cav
+				remove_modifier = mr_raid_order_pm_non_west_pm_arty
+				remove_modifier = mr_raid_order_pm_non_west_pm_non_west
+				remove_modifier = mr_siege_order_pm_inf_pm_inf
+				remove_modifier = mr_siege_order_pm_inf_pm_cav
+				remove_modifier = mr_siege_order_pm_inf_pm_arty
+				remove_modifier = mr_siege_order_pm_inf_pm_non_west
+				remove_modifier = mr_siege_order_pm_cav_pm_inf
+				remove_modifier = mr_siege_order_pm_cav_pm_cav
+				remove_modifier = mr_siege_order_pm_cav_pm_arty
+				remove_modifier = mr_siege_order_pm_cav_pm_non_west
+				remove_modifier = mr_siege_order_pm_arty_pm_inf
+				remove_modifier = mr_siege_order_pm_arty_pm_cav
+				remove_modifier = mr_siege_order_pm_arty_pm_arty
+				remove_modifier = mr_siege_order_pm_arty_pm_non_west
+				remove_modifier = mr_siege_order_pm_non_west_pm_inf
+				remove_modifier = mr_siege_order_pm_non_west_pm_cav
+				remove_modifier = mr_siege_order_pm_non_west_pm_arty
+				remove_modifier = mr_siege_order_pm_non_west_pm_non_west
+				remove_modifier = mr_defend_pm_inf_pm_inf
+				remove_modifier = mr_defend_pm_inf_pm_cav
+				remove_modifier = mr_defend_pm_inf_pm_arty
+				remove_modifier = mr_defend_pm_inf_pm_non_west
+				remove_modifier = mr_defend_pm_cav_pm_inf
+				remove_modifier = mr_defend_pm_cav_pm_cav
+				remove_modifier = mr_defend_pm_cav_pm_arty
+				remove_modifier = mr_defend_pm_cav_pm_non_west
+				remove_modifier = mr_defend_pm_arty_pm_inf
+				remove_modifier = mr_defend_pm_arty_pm_cav
+				remove_modifier = mr_defend_pm_arty_pm_arty
+				remove_modifier = mr_defend_pm_arty_pm_non_west
+				remove_modifier = mr_defend_pm_non_west_pm_inf
+				remove_modifier = mr_defend_pm_non_west_pm_cav
+				remove_modifier = mr_defend_pm_non_west_pm_arty
+				remove_modifier = mr_defend_pm_non_west_pm_non_west
+				remove_modifier = mr_delay_order_pm_inf_pm_inf
+				remove_modifier = mr_delay_order_pm_inf_pm_cav
+				remove_modifier = mr_delay_order_pm_inf_pm_arty
+				remove_modifier = mr_delay_order_pm_inf_pm_non_west
+				remove_modifier = mr_delay_order_pm_cav_pm_inf
+				remove_modifier = mr_delay_order_pm_cav_pm_cav
+				remove_modifier = mr_delay_order_pm_cav_pm_arty
+				remove_modifier = mr_delay_order_pm_cav_pm_non_west
+				remove_modifier = mr_delay_order_pm_arty_pm_inf
+				remove_modifier = mr_delay_order_pm_arty_pm_cav
+				remove_modifier = mr_delay_order_pm_arty_pm_arty
+				remove_modifier = mr_delay_order_pm_arty_pm_non_west
+				remove_modifier = mr_delay_order_pm_non_west_pm_inf
+				remove_modifier = mr_delay_order_pm_non_west_pm_cav
+				remove_modifier = mr_delay_order_pm_non_west_pm_arty
+				remove_modifier = mr_delay_order_pm_non_west_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_inf_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_cav_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_arty_pm_non_west
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_inf
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_cav
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_arty
+				remove_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
+			}
+		}
+	}
+}

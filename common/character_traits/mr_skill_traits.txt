@@ -1,0 +1,14 @@
+# western_army = {
+# 	type = skill
+# 	texture = "gfx/interface/icons/character_trait_icons/forest_commander.dds"
+# 	command_modifier = {
+# 		unit_offense_elevated_mult = -0.3
+# 	}
+# 	possible = {
+# 		always = no
+# 	}
+# 	weight = 0
+# 	replace = {
+# 	}
+# 	value = 0
+# }

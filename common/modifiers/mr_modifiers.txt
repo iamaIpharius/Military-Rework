@@ -1,0 +1,670 @@
+﻿mr_advance_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_advance_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_advance_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_advance_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_advance_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_advance_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_advance_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_advance_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_advance_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_advance_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_advance_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_advance_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_advance_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_advance_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_advance_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_advance_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_raid_order_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_raid_order_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_raid_order_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_raid_order_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_raid_order_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_raid_order_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_raid_order_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_raid_order_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_raid_order_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_raid_order_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_raid_order_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_raid_order_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_raid_order_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_raid_order_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_raid_order_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_raid_order_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_siege_order_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_siege_order_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_siege_order_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_siege_order_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_siege_order_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_siege_order_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_siege_order_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_siege_order_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_siege_order_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_siege_order_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_siege_order_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_siege_order_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_siege_order_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_siege_order_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_siege_order_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_siege_order_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_defend_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_defend_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_defend_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_defend_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_defend_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_defend_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_defend_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_defend_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_defend_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_defend_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_defend_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_defend_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_defend_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_defend_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_defend_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_defend_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_delay_order_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_delay_order_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_delay_order_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_delay_order_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_delay_order_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_delay_order_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_delay_order_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_delay_order_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_delay_order_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_delay_order_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_delay_order_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_delay_order_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_delay_order_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_delay_order_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_delay_order_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_delay_order_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_strongpoint_order_pm_inf_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_strongpoint_order_pm_inf_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_strongpoint_order_pm_inf_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_strongpoint_order_pm_inf_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_strongpoint_order_pm_cav_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.5
+    unit_offense_mult = -0.5
+}
+
+
+mr_strongpoint_order_pm_cav_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_strongpoint_order_pm_cav_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.1
+    unit_offense_mult = -0.1
+}
+
+
+mr_strongpoint_order_pm_cav_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = -0.3
+    unit_offense_mult = -0.3
+}
+
+
+mr_strongpoint_order_pm_arty_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.5
+    unit_offense_mult = 0.5
+}
+
+
+mr_strongpoint_order_pm_arty_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.1
+    unit_offense_mult = 0.1
+}
+
+
+mr_strongpoint_order_pm_arty_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_strongpoint_order_pm_arty_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.3
+    unit_offense_mult = 0.3
+}
+
+
+mr_strongpoint_order_pm_non_west_pm_inf = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_strongpoint_order_pm_non_west_pm_cav = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_strongpoint_order_pm_non_west_pm_arty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}
+
+
+mr_strongpoint_order_pm_non_west_pm_non_west = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    unit_defense_mult = 0.0
+    unit_offense_mult = 0.0
+}

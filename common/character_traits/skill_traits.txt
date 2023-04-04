@@ -68,6 +68,7 @@ forest_commander = {
 	texture = "gfx/interface/icons/character_trait_icons/forest_commander.dds"
 	command_modifier = {
 		unit_defense_forested_mult = 0.25
+		unit_offense_forested_mult = 0.25
 	}
 	possible = {
 		has_role = general
@@ -98,6 +99,7 @@ mountain_commander = {
 	texture = "gfx/interface/icons/character_trait_icons/mountain_commander.dds"
 	command_modifier = {
 		unit_defense_elevated_mult = 0.25
+		unit_offense_elevated_mult = 0.25
 	}
 	possible = {
 		has_role = general
