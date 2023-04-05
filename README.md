@@ -47,6 +47,9 @@ If **you** have ideas feel free to share!
 
 ![Credits](https://i.imgur.com/PLAryYi.jpg)
 
+Thanks you Reptilian_brain, 1230james, Incompetence, One Proud Brazilian for allowing to use your great mods!
+
 - [UHW mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2948397644)
 - [CBJ Strategic Regions Rework](https://steamcommunity.com/sharedfiles/filedetails/?id=2883944649)
 - [Forts](https://steamcommunity.com/sharedfiles/filedetails/?id=2944315567)
+- [ACL](https://steamcommunity.com/sharedfiles/filedetails/?id=2951960564)
