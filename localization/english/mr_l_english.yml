@@ -115,7 +115,7 @@ siege_order_desc:2 "#header $siege_order$#!\nOrder this Commander to siege a [co
 strongpoint_order:0 "Strongpoint"
 strongpoint_order_desc:2 "#header $strongpoint_order$#!\nOrder this Commander to make a stand on [concept_front] strongpoints.[ConcatIfNeitherEmpty( '\n\n', COMMANDER_ORDER_TYPE.GetModifier.GetDesc )]"
 westernization:0 "Westernization"
-westernization_desc:0 "Westernization process requires from us to stand up, or we will be stomped!"
+westernization_desc:0 "Westernization process requires from us to stand up, or we will be stomped! CAN BE UNLOCKED BY DECISION"
 cartridge:0 "Cartridge"
 building_cav:0 "Cavalry Barracks"
 building_arty:0 "Artillery Barracks"
