@@ -1,5 +1,7 @@
 ![Main](https://i.imgur.com/n21kjpW.jpg)
+
 Hello everyone! Are you tired of non-exicting battle system? Only one type of unit in PDX game? Are they fighting naked? Whyyyy... Okay lets talk about this mod. **Military rework** trying to add all of this to the game! New types of units, buldigs and more!
+
 ![Overview](https://i.imgur.com/Q3pOCSY.jpg)
 
 - New units - Artillery, Cavalry, Non-westernized troops
@@ -12,12 +14,23 @@ Hello everyone! Are you tired of non-exicting battle system? Only one type of un
 - A lot of new Strategic Regions!
 
 ![Battle system](https://i.imgur.com/kB24pfv.jpg)
-Brand New 5-Step Battle system! Order-YourUnit-EnemyUnit-Terrain-Cube! YES **_CUBE_** IS BACK! What's going one here? Lets find out! There are 6 orders, every order adds buff or debuff to army, using unit type. For example, Raid order adds army buff, if Cavalry is the main unit of your army(More then 40% of your army is Cavalry type). Then
-we have scissors-paper-rock kinda game, means Cavalry beats Artillery beats Infantry beats Cavalry.
+
+Brand New 5-Step Battle system! Order-YourUnit-EnemyUnit-Terrain-Cube! YES **_CUBE_** IS BACK!
+
+What's going one here? Lets find out! There are 6 orders, every order adds buff or debuff to army, using unit type.
+
+For example, Raid order adds army buff, if Cavalry is the main unit of your army(More then 40% of your army is Cavalry type).
+
+Then we have rock-paper-scissors kinda game, means Cavalry beats Artillery beats Infantry beats Cavalry.
+
 ![Bonus](https://i.imgur.com/0Y0afUq.png)
+
 So, if your mostly Cavalry army fights Infantry army, you will get debuff for unit counter. All of this are calculated, when battle starts and added to Commander as Modifier.
+
 ![Dice](https://i.imgur.com/I4YFciz.png)
+
 Then, insted of stupid Battle Conditions we have Cube-Terrain! Ebery Terrain provides dbuff for attacker from 0 to -25%, and Cube add from -30% to 30% to Attack or Defence for sides. That is it!
+
 ![Future](https://i.imgur.com/WgHT9Jk.jpg)
 
 - Naval rework
