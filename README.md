@@ -4,15 +4,20 @@ Hello everyone! Are you tired of non-exicting battle system? Only one type of un
 
 - New units - Artillery, Cavalry, Non-westernized troops
 - New Production Methods for them (A LOT)
-- New orders: Raid Siege Delay and Strongpoint
-- New buildings - Arty And Cavalry Barracks and Forts
+- New orders: Raid, Siege, Delay and Strongpoint
+- New buildings - Artillery and Cavalry Barracks, and Forts
 - Whole New **Battle System**!
-- Westernization process! (simple but still)
-- A bit of tech balancing (one new tech and reduced defence bonuses)
+- Westernization process via Decision! (simple but still)
+- A bit of tech balancing (one new tech and reduced defence bonuses from two others)
 - A lot of new Strategic Regions!
 
 ![Battle system](https://i.imgur.com/kB24pfv.jpg)
-Brand New 5-Step Battle system! Order-YourUnit-EnemyUnit-Terrain-Cube! YES **_CUBE_** IS BACK! What's going one here? Lets find out! There are 6 orders, every order adds buff or debuff to army, using unit type. For example, Raid order adds army buff, if Cavalry is the main unit of your army(More then 40% of your army is Cavalry type). Then we have scissors-paper-rock kinda game, means Cavalry beats Artillery beats Infantry beats Cavalry. So, if your mostly Cavalry army fights Infantry army, you will get debuff for unit counter. All of this are calculated, when battle starts and added to Commander as Modifier. Then, insted of stupid Battle Conditions we have Cube-Terrain! Ebery Terrain provides dbuff for attacker from 0 to -25%, and Cube add from -30% to 30% to Attack or Defence for sides. That is it!
+Brand New 5-Step Battle system! Order-YourUnit-EnemyUnit-Terrain-Cube! YES **_CUBE_** IS BACK! What's going one here? Lets find out! There are 6 orders, every order adds buff or debuff to army, using unit type. For example, Raid order adds army buff, if Cavalry is the main unit of your army(More then 40% of your army is Cavalry type). Then
+we have scissors-paper-rock kinda game, means Cavalry beats Artillery beats Infantry beats Cavalry.
+![Bonus](https://i.imgur.com/0Y0afUq.png)
+So, if your mostly Cavalry army fights Infantry army, you will get debuff for unit counter. All of this are calculated, when battle starts and added to Commander as Modifier.
+![Dice](https://i.imgur.com/I4YFciz.png)
+Then, insted of stupid Battle Conditions we have Cube-Terrain! Ebery Terrain provides dbuff for attacker from 0 to -25%, and Cube add from -30% to 30% to Attack or Defence for sides. That is it!
 ![Future](https://i.imgur.com/WgHT9Jk.jpg)
 
 - Naval rework
