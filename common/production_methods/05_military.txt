@@ -58,7 +58,7 @@ pm_late_line = {
 	texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
 	is_default = no
 	unlocking_technologies = {
-		line_infantry
+		general_staff
 	}
 	unlocking_production_methods = {
 		pm_inf
@@ -97,7 +97,7 @@ pm_flexible = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
 	is_default = no
 	unlocking_technologies = {
-		general_staff
+		enlistment_offices
 	}
 	unlocking_production_methods = {
 		pm_inf
@@ -136,7 +136,7 @@ pm_early_trench = {
 	texture = "gfx/interface/icons/production_method_icons/trench_infantry.dds"
 	is_default = no
 	unlocking_technologies = {
-		enlistment_offices
+		military_statistics
 	}
 	unlocking_production_methods = {
 		pm_inf

@@ -115,12 +115,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -135,12 +135,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -155,12 +155,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -175,12 +175,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -195,12 +195,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -215,12 +215,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -235,12 +235,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -255,12 +255,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -275,12 +275,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -295,12 +295,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -315,12 +315,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -335,12 +335,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -355,12 +355,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -375,12 +375,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -395,12 +395,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -415,12 +415,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -435,12 +435,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -455,12 +455,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -475,12 +475,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -495,12 +495,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -515,12 +515,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -535,12 +535,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -555,12 +555,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -575,12 +575,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -595,12 +595,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -615,12 +615,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -635,12 +635,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -655,12 +655,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -675,12 +675,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -695,12 +695,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -715,12 +715,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -735,12 +735,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -755,12 +755,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -775,12 +775,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -795,12 +795,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -815,12 +815,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -835,12 +835,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -855,12 +855,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -875,12 +875,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -895,12 +895,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -915,12 +915,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -935,12 +935,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -955,12 +955,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -975,12 +975,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -995,12 +995,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1015,12 +1015,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1035,12 +1035,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1055,12 +1055,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:defender.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1179,12 +1179,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1199,12 +1199,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1219,12 +1219,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1239,12 +1239,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1259,12 +1259,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1279,12 +1279,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1299,12 +1299,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1319,12 +1319,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1339,12 +1339,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1359,12 +1359,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1379,12 +1379,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1399,12 +1399,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1419,12 +1419,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1439,12 +1439,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1459,12 +1459,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1479,12 +1479,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1499,12 +1499,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1519,12 +1519,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1539,12 +1539,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1559,12 +1559,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1579,12 +1579,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1599,12 +1599,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1619,12 +1619,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1639,12 +1639,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1659,12 +1659,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1679,12 +1679,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1699,12 +1699,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1719,12 +1719,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1739,12 +1739,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1759,12 +1759,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1779,12 +1779,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1799,12 +1799,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1819,12 +1819,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1839,12 +1839,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1859,12 +1859,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1879,12 +1879,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1899,12 +1899,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1919,12 +1919,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1939,12 +1939,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1959,12 +1959,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1979,12 +1979,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -1999,12 +1999,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2019,12 +2019,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2039,12 +2039,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2059,12 +2059,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_inf
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2079,12 +2079,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_cav
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2099,12 +2099,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_arty
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}
@@ -2119,12 +2119,12 @@ on_battle_started = {
 						commander_pm_usage = {
 							target = owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						commander_pm_usage = {
 							target = scope:attacker.owner
 							production_method = pm_non_west
-							value > 0.4
+							value > 0.5
 						}
 						# Why do I need to specify the scope here explicity? idfk
 					}

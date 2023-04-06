@@ -74,3 +74,37 @@ concrete_fortifications = {
 		value = 1
 	}
 }
+
+military_statistics = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/military_statistics.dds"
+	category = military
+	modifier = {
+		building_mobilization_cost_mult = -0.2
+	}
+	unlocking_technologies = {
+		electric_telegraph
+		enlistment_offices
+		general_staff
+	}
+	ai_weight = {
+		value = 1
+	}
+}
+
+trench_works = {
+	# Unlocks Officer Training PM in Barracks
+	# Unlocks Barbed Wire Fences in Livestock Ranches
+	# Unlocks Trench Infantry
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
+	category = military
+	unlocking_technologies = {
+		military_statistics
+		general_staff
+		electric_telegraph
+	}
+	ai_weight = {
+		value = 2		# important for everyone
+	}
+}
