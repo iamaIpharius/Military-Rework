@@ -22,49 +22,49 @@ building_barracks = {
 	required_construction = construction_cost_very_low
 }
 
-building_cav = {
-	building_group = bg_army
-	recruits_combat_unit = combat_unit_cav
-	texture = "gfx/interface/icons/building_icons/building_barracks_cav.dds"
-	city_type = city
-	has_max_level = yes
-	unlocking_technologies = {
-		westernization
-	}
-	production_method_groups = {
-		pmg_type_cav
-		pmg_main_force_cav
-		pmg_support_cav
-		pmg_recon_cav
-		pmg_weapon_cav
-		pmg_medical_aid
-		pmg_log
-		pmg_com
-	}
-	required_construction = construction_cost_very_low
-}
+# building_cav = {
+# 	building_group = bg_army
+# 	recruits_combat_unit = combat_unit_cav
+# 	texture = "gfx/interface/icons/building_icons/building_barracks_cav.dds"
+# 	city_type = city
+# 	has_max_level = yes
+# 	unlocking_technologies = {
+# 		westernization
+# 	}
+# 	production_method_groups = {
+# 		pmg_type_cav
+# 		pmg_main_force_cav
+# 		pmg_support_cav
+# 		pmg_recon_cav
+# 		pmg_weapon_cav
+# 		pmg_medical_aid
+# 		pmg_log
+# 		pmg_com
+# 	}
+# 	required_construction = construction_cost_very_low
+# }
 
-building_arty = {
-	building_group = bg_army
-	recruits_combat_unit = combat_unit_arty
-	texture = "gfx/interface/icons/building_icons/building_barracks_arty.dds"
-	city_type = city
-	has_max_level = yes
-	unlocking_technologies = {
-		westernization
-	}
-	production_method_groups = {
-		pmg_type_arty
-		pmg_main_force_arty
-		pmg_support_arty
-		pmg_recon_arty
-		pmg_weapon_arty
-		pmg_medical_aid
-		pmg_log
-		pmg_com
-	}
-	required_construction = construction_cost_very_low
-}
+# building_arty = {
+# 	building_group = bg_army
+# 	recruits_combat_unit = combat_unit_arty
+# 	texture = "gfx/interface/icons/building_icons/building_barracks_arty.dds"
+# 	city_type = city
+# 	has_max_level = yes
+# 	unlocking_technologies = {
+# 		westernization
+# 	}
+# 	production_method_groups = {
+# 		pmg_type_arty
+# 		pmg_main_force_arty
+# 		pmg_support_arty
+# 		pmg_recon_arty
+# 		pmg_weapon_arty
+# 		pmg_medical_aid
+# 		pmg_log
+# 		pmg_com
+# 	}
+# 	required_construction = construction_cost_very_low
+# }
 
 building_conscription_center = {
 	building_group = bg_conscription

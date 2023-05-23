@@ -4,6 +4,8 @@
 	production_methods = {
 		pm_inf
 		pm_non_west
+		pm_cav
+		pm_arty
 	}
 }
 
@@ -20,6 +22,16 @@ pmg_main_force = {
 		pm_tribes
 		pm_feudal
 		pm_irregulars
+		pm_cavalry
+		pm_hussards
+		pm_dragoons
+		pm_cuirassiers
+		pm_light
+		pm_medium
+		pm_heavy
+		pm_heavy_2
+		pm_heavy_3
+		pm_heavy_4
 	}
 }
 
@@ -42,6 +54,9 @@ pmg_support = {
 		pm_armtrain
 		pm_old_arty
 		pm_local_militias
+		pm_mortars
+		pm_gatling
+		pm_siege
 	}
 }
 
@@ -56,6 +71,8 @@ pmg_recon = {
 		pm_cav_scouts
 		pm_balloon
 		pm_planes
+		pm_armored_cars
+		pm_observers
 	}
 }
 
@@ -70,6 +87,16 @@ pmg_weapon = {
 		pm_breach_load_rifle
 		pm_cartridge
 		pm_bolt_action
+		pm_cold_weapons
+		pm_pistols
+		pm_early_carbines
+		pm_revolvers
+		pm_carbines
+		pm_muzzle_load_gun
+		pm_rifled_gun
+		pm_breach_load_gun
+		pm_projectile
+		pm_recoil_system
 	}
 }
 
