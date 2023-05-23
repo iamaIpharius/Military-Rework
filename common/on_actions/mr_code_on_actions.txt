@@ -2247,7 +2247,6 @@ on_battle_ended = {
 						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
 						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
 					}
-					
 				}
 				remove_modifier = mr_advance_pm_inf_pm_inf
 				remove_modifier = mr_advance_pm_inf_pm_cav
@@ -2448,7 +2447,6 @@ on_battle_ended = {
 						has_modifier = mr_strongpoint_order_pm_non_west_pm_arty
 						has_modifier = mr_strongpoint_order_pm_non_west_pm_non_west
 					}
-					
 				}
 				remove_modifier = mr_advance_pm_inf_pm_inf
 				remove_modifier = mr_advance_pm_inf_pm_cav
@@ -2550,3 +2548,24 @@ on_battle_ended = {
 		}
 	}
 }
+
+# Fires for all countries with an interest marker in the play's region
+# Root = Country who owns the interest marker
+# scope:diplomatic_play = The diplomatic play that has been started
+# on_diplomatic_play_started = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				is_diplomatic_play_undecided_participant = yes
+# 			}
+# 			create_truce = {
+# 				country = scope:diplomatic_play.target
+# 				months = 12
+# 			}
+# 			create_truce = {
+# 				country = scope:diplomatic_play.initiator
+# 				months = 12
+# 			}
+# 		}
+# 	}
+# }
