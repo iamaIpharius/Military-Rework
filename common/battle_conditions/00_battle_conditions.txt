@@ -1335,7 +1335,16 @@ battle_condition_farmlands_dice_1 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {
+			OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}
+			
+		} 
     }
 	
 	weight = {
@@ -1355,7 +1364,13 @@ battle_condition_farmlands_dice_2 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}} 
     }
 	
 	weight = {
@@ -1375,7 +1390,13 @@ battle_condition_farmlands_dice_3 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}} 
     }
 	
 	weight = {
@@ -1395,7 +1416,13 @@ battle_condition_farmlands_dice_4 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}} 
     }
 	
 	weight = {
@@ -1415,7 +1442,13 @@ battle_condition_farmlands_dice_5 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}} 
     }
 	
 	weight = {
@@ -1435,7 +1468,13 @@ battle_condition_farmlands_dice_6 = {
 		scope:character = { 
 			has_role = general 
 		}
-        province = {has_terrain = farmlands} 
+        province = {OR = {
+				has_terrain = farmland_rye
+				has_terrain = farmland_rice
+				has_terrain = farmland_millet
+				has_terrain = farmland_wheat
+				has_terrain = farmland_maize
+			}} 
     }
 	
 	weight = {
@@ -21932,7 +21971,13 @@ battle_condition_docks_dice_6 = {
 # 		}
 # 		if = {
 # 			limit = {
-# 				province = { has_terrain = farmlands }
+# 				province = { OR = {
+			# 	has_terrain = farmland_rye
+			# 	has_terrain = farmland_rice
+			# 	has_terrain = farmland_millet
+			# 	has_terrain = farmland_wheat
+			# 	has_terrain = farmland_maize
+			# } }
 # 			}
 # 			add = 1
 # 		}
